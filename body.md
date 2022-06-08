@@ -114,37 +114,37 @@ PaperType lookup by extension:
 >
 >- &quot;.doc&quot;: 1
 >
->-&quot;.xls&quot;: 2
+>- &quot;.xls&quot;: 2
 >
->-&quot;.txt&quot;: 3
+>- &quot;.txt&quot;: 3
 >
->-&quot;.pdf&quot;: 4
+>- &quot;.pdf&quot;: 4
 >
->-&quot;.msg&quot;: 5
+>- &quot;.msg&quot;: 5
 >
->-&quot;.mp3&quot;: 6
+>- &quot;.mp3&quot;: 6
 >
->-&quot;.ppt&quot;: 7
+>- &quot;.ppt&quot;: 7
 >
->-&quot;.jpg&quot; or &quot;.jpeg&quot; : 10
+>- &quot;.jpg&quot; or &quot;.jpeg&quot; : 10
 >
->-&quot;.docx&quot;: 11
+>- &quot;.docx&quot;: 11
 >
->-&quot;.xlsx&quot;: 12
+>- &quot;.xlsx&quot;: 12
 >
->-&quot;.pptx&quot;: 13
+>- &quot;.pptx&quot;: 13
 >
->-&quot;.wav&quot;: 14
+>- &quot;.wav&quot;: 14
 >
->-&quot;.zip&quot;: 15
+>- &quot;.zip&quot;: 15
 >
->-&quot;.xlsm&quot;: 16
+>- &quot;.xlsm&quot;: 16
 >
->-&quot;.dmsg&quot;: 17
+>- &quot;.dmsg&quot;: 17
 >
->-&quot;&quot;: 9
+>- &quot;&quot;: 9
 >
->-&quot;other&quot; : 8
+>- &quot;other&quot; : 8
 
 
 # Examples endpoint calls
@@ -164,13 +164,13 @@ Required Parameters:
 
 Curl Example:
 
->-curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/client/ref/JON123?shallow=true&#39; 
-
+```
+curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/client/ref/JON123?shallow=true&#39; 
 --header &#39;Accept: application/json&#39; \
-
 --header &#39;Authorization: Bearer eyJhbGci…
+```
 
-#
+
 
 # Create a client with options to create structure or apply a template structure
 
