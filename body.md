@@ -2,6 +2,14 @@
 
 IDP and Base API URLS
 
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
 Live:
 
 >Swagger: [https://api.papercloudelite.co.uk/swagger](https://api.papercloudelite.co.uk/swagger)
@@ -172,7 +180,7 @@ curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v
 
 
 
-# Create a client with options to create structure or apply a template structure
+## Create a client with options to create structure or apply a template structure
 
 These endpoints allow creation of client files within the Papercloud system. Structure can also be applied as part of the creation, which has been shown in the examples
 
