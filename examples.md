@@ -5,7 +5,7 @@ Authentication
 Live:
 
 ``` html
- ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+<img src="[url](https://myoctocat.com/assets/images/base-octocat.svg)" alt="alternatetext"> 
 ```
 
  
