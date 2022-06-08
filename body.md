@@ -53,27 +53,25 @@ V1 is still active, however it will be phased out at the end of 2022.
 
 A set of flows have been created to detail the core exposed functionality of the Papercloud API. This suite of calls is accessible from &quot;URL ONCE HOSTED&quot;
 
-> - Flow1 - Creating Clients
->	 - Create Client file with option to apply structure or apply a template
->		 - Flow1A - Client Get Client by Reference Number
->		 - Flow1B – Cabinet Get All	
->	  - Create a client file with no structure (blank)
->		  - Flow 1C - Create Client file no structure (blank structure with no template)
->		 - Create a client file and define a bespoke structure for tabs. Rows and boxes
->	    - Flow 1D - Create Client File with structure
->	- Client Create Client and apply and existing template
->	   - Flow1E – Template Get List
->	    - Flow 1F - Client Create Client and apply template
-
-> - Flow 2 - Adding Structure
->   - Flow2A - Client Apply Template
->   - Flow2B – Add a tab to a client file
->   - Flow2C – Add a Row to a client file
->   - Flow2D - Add a Box to a client file
-
-> - Flow3 – Add Paperwork to a box
->	- Flow3A Paper V2 Upload Paper 
-> - Flow4 – Searches
+ - Flow1 - Creating Clients
+	 - Create Client file with option to apply structure or apply a template
+		 - Flow1A - Client Get Client by Reference Number
+		 - Flow1B – Cabinet Get All	
+	  - Create a client file with no structure (blank)
+		  - Flow 1C - Create Client file no structure (blank structure with no template)
+		 - Create a client file and define a bespoke structure for tabs. Rows and boxes
+	    - Flow 1D - Create Client File with structure
+	- Client Create Client and apply and existing template
+	   - Flow1E – Template Get List
+	    - Flow 1F - Client Create Client and apply template
+- Flow 2 - Adding Structure
+   - Flow2A - Client Apply Template
+   - Flow2B – Add a tab to a client file
+   - Flow2C – Add a Row to a client file
+   - Flow2D - Add a Box to a client file
+- Flow3 – Add Paperwork to a box
+	- Flow3A Paper V2 Upload Paper 
+ - Flow4 – Searches
 	 - Flow4A - See All Tabs Rows Boxes For specific client file by ExternalReference
 	- Flow4B - Get a list of all boxes clients that are API accessible that contain the given tag
  - Flow5 – Viewing, retrieving, and downloading items
@@ -83,7 +81,6 @@ A set of flows have been created to detail the core exposed functionality of the
   - Flow5D -Paper V2 Download Paper Base64
  - Flow6 – Jumping to items
 	 - Flow6A - Message Hub Post Jump Itinerary
-
 
 ## Flow document
 
