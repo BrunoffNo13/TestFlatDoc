@@ -65,10 +65,10 @@ A set of flows have been created to detail the core exposed functionality of the
 >    - Flow 1F - Client Create Client and apply template
    
 > - Flow2 – Add to structure to existing clients
->  - Flow2A - Client Apply Template
->  - Flow2B – Add a tab to a client file
->  - Flow2C – Add a Row to a client file
->  - Flow2D - Add a Box to a client file
+>   - Flow2A - Client Apply Template
+>   - Flow2B – Add a tab to a client file
+>     - Flow2C – Add a Row to a client file
+>     - Flow2D - Add a Box to a client file
 >  
 > - Flow3 – Add Paperwork to a box
 >  - Flow3A Paper V2 Upload Paper
