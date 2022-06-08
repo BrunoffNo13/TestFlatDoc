@@ -65,6 +65,12 @@ A set of flows have been created to detail the core exposed functionality of the
 >     - Flow1E – Template Get List
 >     - Flow 1F - Client Create Client and apply template
 
+> - Flow 2 - Adding Structure
+>   - Flow2A - Client Apply Template
+>     - Flow2B – Add a tab to a client file
+>     - Flow2C – Add a Row to a client file
+>     - Flow2D - Add a Box to a client file
+
 ## Flow document
 
 Note the variables within the flow document point to the sandbox:
