@@ -147,7 +147,7 @@ PaperType lookup by extension:
 >- &quot;other&quot; : 8
 
 
-# Examples endpoint calls
+# Example endpoint calls
 
 ## Check if a client exists by external reference
 
@@ -1234,22 +1234,24 @@ Responses:
 ```
 Example of multiple return items:
 
-SHOW EXAMPLES
+NKB SHOW EXAMPLES
 
-# Upload Paper items
-
+## Upload Paper items
+NKB TO DO
 ![](RackMultipart20220608-1-mjrzu0_html_a4476649dbd51e50.png)
 
 Parameters:
 
-- Files – Required – the File to be sent
-- Upload Itinerary:
-  - { &quot;ClientId&quot;:, &quot;TabId&quot;:, &quot;RowId&quot;:, &quot;BoxId&quot;:, &quot;FileInformation&quot;: [{ &quot;FileName&quot;: &quot;&quot;, &quot;CreatedDate&quot;: &quot;&quot;}] }
+> - Files – Required – the File to be sent
+> - Upload Itinerary:
+>  -- { &quot;ClientId&quot;:, &quot;TabId&quot;:, &quot;RowId&quot;:, &quot;BoxId&quot;:, &quot;FileInformation&quot;: [{ &quot;FileName&quot;: &quot;&quot;, &quot;CreatedDate&quot;: &quot;&quot;}] }
 
+
+NKB
 ![](RackMultipart20220608-1-mjrzu0_html_e0a47e0fcc0ddd24.png)
 
-Body:
-
+### Body:
+```
 **{**
 
 **&quot;appendToFront&quot;**** : **** true****, --REQUIRED (set the location to either the front\rear of the box)**
@@ -1279,9 +1281,9 @@ Body:
 **]**
 
 **}**
-
-PaperType lookup by extension:
-
+```
+### PaperType lookup by extension:
+```
 &quot;.tif&quot; or &quot;.tiff&quot; : 0
 
 &quot;.doc&quot;: 1
@@ -1317,44 +1319,45 @@ PaperType lookup by extension:
 &quot;&quot;: 9
 
 &quot;other&quot; : 8
+```
 
-# Send Thumbnails with paper items
+## Send Thumbnails with paper items
 
 This is optional for all items paperwork however this is specifically useful for Office items as server-side thumbnail generation is near impossible due to Office being a client-side application. Any Office documents will be added to the system without thumbnails if this is not supplied. (Note: thumbnails will be applied once the version is updated within PCE via Watermark Connect.)
 
-COME BACK TO
+NKB COME BACK TO
 
-# Paper Deletes
+## Paper Deletes
 
 When removing paperwork this is classed as a soft delete. As with Papercloud front end the paperwork will be placed within the relative users recycle bin.
-
+NKB
 ![](RackMultipart20220608-1-mjrzu0_html_9b0a745efbb9d043.png)
 
 Required Parameters:
 
-- Id (PaperID)
+> - Id (PaperID)
 
 Return values:
 
-- TBC ONCE CHANGES ARE MADE
+> - TBC ONCE CHANGES ARE MADE
 
-# Box Deletes
+## Box Deletes
 
 When removing boxes this is classed as a soft delete. As with Papercloud front end the box and containing paperwork will be placed within the relative users recycle bin.
-
+NKB
 ![](RackMultipart20220608-1-mjrzu0_html_d6c6bd440f47392d.png)
 
 Required Parameters:
 
-- Id (BoxID)
+> - Id (BoxID)
 
 Return values:
+NKB
+> - TBC ONCE CHANGES ARE MADE
 
-- TBC ONCE CHANGES ARE MADE
+## Update existing client file details
 
-# Update existing client file details
-
-# To do:
+## To do:
 
 - Updates for existing items
 - See Templates
