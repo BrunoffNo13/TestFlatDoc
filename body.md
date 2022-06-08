@@ -194,7 +194,7 @@ A explanation of all fields is found here, this version is for client type &quot
 
 NKB IMAGE???
 
-'''
+```
 **{**
 
 **&quot;clientType&quot;:**  **&quot;Person&quot;**** ,--defines if the client is either a &quot;Person&quot; or &quot;other&quot; (Company)**
@@ -268,10 +268,10 @@ NKB IMAGE???
 **}**
 
 **}**
-'''
+```
 
 Create a file of the type &quot;Other&quot;
-'''
+```
 **{**
 
 **&quot;clientType&quot;:**  **&quot;Other&quot;**** , --defines if the client is either a &quot;Person&quot; or &quot;other&quot; (Company)**
@@ -321,11 +321,11 @@ Create a file of the type &quot;Other&quot;
 **&quot;mergeTemplateWithExistingStructure&quot;:**  **true**
 
 **}**
-'''
+```
 To apply structure within this endpoint create the following section can be included within the body, this is fully optional – for a clearer example see XXXXX:
 
 ALSO NEED ROW ORDER asc to desc or other way?
-
+```
 **&quot;tabs&quot;: [**
 
 **{**
@@ -379,7 +379,7 @@ ALSO NEED ROW ORDER asc to desc or other way?
 **}**
 
 **],**
-
+```
 ## Pre-Requisites\linked items:
 
 - Check if a client exists by external reference
