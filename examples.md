@@ -8,6 +8,8 @@ Live:
 <img src="[url](https://myoctocat.com/assets/images/base-octocat.svg)" alt="alternatetext"> 
 ```
 
+[Photo](https://myoctocat.com/assets/images/base-octocat.svg)
+
  
 
 
