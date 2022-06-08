@@ -23,7 +23,7 @@ Sandbox:
 >Token URL: [https://idpsandbox01.papercloudelite.co.uk/connect/token](https://idpsandbox01.papercloudelite.co.uk/connect/token)
 
 
-# Flows
+## Flows
 
 A set of flows have been created to detail the core exposed functionality of the Papercloud API. This suite of calls is accessible from &quot;URL ONCE HOSTED&quot;
 
@@ -56,11 +56,11 @@ A set of flows have been created to detail the core exposed functionality of the
 >  - Flow6A - Message Hub Post Jump Itinerary
 
 
-# Flow document
+## Flow document
 
 Note the variables within the flow document point to the sandbox:
 
-# Connect config for use with the Sandbox
+## Connect config for use with the Sandbox
 
 With WatermarkConnect closed the below file should be placed in the following location:
 
@@ -69,7 +69,7 @@ C:\Program Files\WatermarkTech\WatermarkConnect
 NEED FILE
 
 
-## Generic attributes
+# Generic attributes
 
 These attributes are generic across the API calls.
 
