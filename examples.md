@@ -6,8 +6,10 @@ Live:
 
 ``` html
 <body class='Swagger: https://api.papercloudelite.co.uk/swagger'>
-  ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+
 ```
+
+  ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
 
 
 Sandbox:
