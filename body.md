@@ -80,6 +80,13 @@ Used for both Tabs and Boxes.
 Colour fields accept either the numerical value or the text value.
 
 
+``` html
+<body class='Colours'
+      <p>"<span style="color: #808080;">Grey</span>" = 0</p>
+      >
+```
+
+
     <p>"<span style="color: #808080;">Grey</span>" = 0</p>
     <p>"<span style="color: #0000ff;">Blue</span>" = 1</p>
     <p>"Brown" = 2</p>
