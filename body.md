@@ -254,115 +254,71 @@ NKB IMAGE???
 ```
 
 Create a file of the type &quot;Other&quot;
-```
-**{**
+```json
 
-**&quot;clientType&quot;:**  **&quot;Other&quot;**** , --defines if the client is either a &quot;Person&quot; or &quot;other&quot; (Company)**
-
-**&quot;fileName&quot;:**  **&quot;string&quot;**** , --OPTIONAL (Company\Account name)**
-
-**&quot;notes&quot;:**  **&quot;string&quot;**** , --OPTIONAL (Any entry is displayed within the client file)**
-
-**&quot;primaryContactExternalReference&quot;:**  **&quot;string&quot;**** , --OPTIONAL though advised (created a link between 3 ****rd**  **party system and Papercloud via the unique identifier from the 3**** rd **** party)**
-
-**&quot;phoneNumber1&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;phoneNumber2&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;phoneNumber3&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;addressLine1&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;addressLine2&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;addressLine3&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;addressLine4&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;addressLine5&quot;:**  **&quot;string&quot;**** , ****--OPTIONAL**
-
-**&quot;postcode&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;emails&quot;: [ --OPTIONAL (comma separated list of email addresses for the client)**
-
-**&quot;string&quot;**
-
-**],**
-
-**&quot;cabinetId&quot;:**  **0**** , --OPTIONAL (define the cabinet that the client should be placed in – blank\not included creates the client outside of a cabinet)**
-
-**&quot;cabinetName&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;cabinetExternalReference&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;templateParameters&quot;: { --OPTIONAL (allows you to define and apply a template at create)**
-
-**&quot;templateId&quot;:**  **0**** ,**
-
-**&quot;templateTitle&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;mergeTemplateWithExistingStructure&quot;:**  **true**
-
-**}**
+{
+  "clientType": "Other", --defines if the client is either a “Person” or “other” (Company)
+  "fileName": "string", --OPTIONAL (Company\Account name)
+  "notes": "string", --OPTIONAL (Any entry is displayed within the client file)
+  "primaryContactExternalReference": "string", --OPTIONAL though advised (created a link between 3rd party system and Papercloud via the unique identifier from the 3rd party)
+  "phoneNumber1": "string", --OPTIONAL
+  "phoneNumber2": "string", --OPTIONAL
+  "phoneNumber3": "string", --OPTIONAL
+  "addressLine1": "string", --OPTIONAL
+  "addressLine2": "string", --OPTIONAL
+  "addressLine3": "string", --OPTIONAL
+  "addressLine4": "string", --OPTIONAL
+  "addressLine5": "string", --OPTIONAL
+  "postcode": "string", --OPTIONAL
+  "emails": [ --OPTIONAL (comma separated list of email addresses for the client)
+    "string"
+  ], 
+  "cabinetId": 0, --OPTIONAL (define the cabinet that the client should be placed in – blank\not included creates the client outside of a cabinet)
+  "cabinetName": "string", --OPTIONAL
+  "cabinetExternalReference": "string", --OPTIONAL
+  "templateParameters": { --OPTIONAL (allows you to define and apply a template at create)
+    "templateId": 0,
+    "templateTitle": "string",
+    "mergeTemplateWithExistingStructure": true
+  }
+  
 ```
 To apply structure within this endpoint create the following section can be included within the body, this is fully optional – for a clearer example see XXXXX:
 
 ALSO NEED ROW ORDER asc to desc or other way?
+```json
+
+"tabs": [
+    {    
+      "title": "string", --REQUIRED (the title to be applied to the tab)
+      "position": 0, -- OPTIONAL (decide on the position of the tab within the client file)
+      "colour": "Grey", --OPTIONAL (
+      "rows": [ --OPTIONAL (add rows to the new tab)
+        {
+          "title": "string", --REQUIRED if adding rows (the title to be applied to the Row)
+          "position": 0, --OPTIONAL (order in which the row will be created)
+          "boxes": [ --OPTIONAL (add boxes to the row)
+            {
+              "title": "string", --OPTIONAL
+              "notes": "string", --OPTIONAL
+              "date": "2022-05-31", --OPTIONAL
+              "colour": "Grey", --OPTIONAL
+              "deleted": false, --REQUIRED           
+              "tagCount": 0, --OPTIONAL
+              "tags": [ --OPTIONAL
+                "string" –List of comma separated tags to be applied to the box
+              ]
+            }
+          ],
+          "notes": "string" –OPTIONAL(row notes)
+        }
+      ],
+    }
+  ],
+
+
 ```
-**&quot;tabs&quot;: [**
 
-**{**
-
-**&quot;title&quot;:**  **&quot;string&quot;**** , --REQUIRED (the title to be applied to the tab)**
-
-**&quot;position&quot;:**  **0**** , -- OPTIONAL (decide on the position of the tab within the client file)**
-
-**&quot;colour&quot;:**  **&quot;Grey&quot;**** , --OPTIONAL (**
-
-**&quot;rows&quot;: [ --OPTIONAL (add rows to the new tab)**
-
-**{**
-
-**&quot;title&quot;:**  **&quot;string&quot;**** , --REQUIRED if adding rows (the title to be applied to the Row)**
-
-**&quot;position&quot;:**  **0**** , --OPTIONAL (order in which the row will be created)**
-
-**&quot;boxes&quot;: [ --OPTIONAL (add boxes to the row)**
-
-**{**
-
-**&quot;title&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;notes&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;date&quot;:**  **&quot;2022-05-31&quot;**** , --OPTIONAL**
-
-**&quot;colour&quot;:**  **&quot;Grey&quot;**** , --OPTIONAL**
-
-**&quot;deleted&quot;:**  **false**** , --REQUIRED**
-
-**&quot;tagCount&quot;:**  **0**** , --OPTIONAL**
-
-**&quot;tags&quot;: [ --OPTIONAL**
-
-**&quot;string&quot;**  **–List of comma separated tags to be applied to the box**
-
-**]**
-
-**}**
-
-**],**
-
-**&quot;notes&quot;:**  **&quot;string&quot;** **–OPTIONAL(row notes)**
-
-**}**
-
-**],**
-
-**}**
-
-**],**
-```
 ### Pre-Requisites\linked items:
 
 - Check if a client exists by external reference
