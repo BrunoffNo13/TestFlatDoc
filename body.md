@@ -63,7 +63,7 @@ A set of flows have been created to detail the core exposed functionality of the
 >  - Client Create Client and apply and existing template
 >    - Flow1E – Template Get List
 >    - Flow 1F - Client Create Client and apply template
->    
+   
 > - Flow2 – Add to structure to existing clients
 >  - Flow2A - Client Apply Template
 >  - Flow2B – Add a tab to a client file
@@ -72,7 +72,7 @@ A set of flows have been created to detail the core exposed functionality of the
 >  
 > - Flow3 – Add Paperwork to a box
 >  - Flow3A Paper V2 Upload Paper
->  
+>   
 > - Flow4 – Searches
 >  - Flow4A - See All Tabs Rows Boxes For specific client file by ExternalReference
 >  - Flow4B - Get a list of all boxes clients that are API accessible that contain the given tag
