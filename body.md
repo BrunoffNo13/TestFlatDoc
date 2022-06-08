@@ -1,12 +1,3 @@
-# Contents
-
-[1. Authentication 2](#_Toc105417984)
-
-[2. Flows 3](#_Toc105417985)
-
-[3. Flow document 3](#_Toc105417986)
-
-![](RackMultipart20220608-1-mjrzu0_html_2c8ab4abc69b8203.gif)[3](#_Toc105417987)
 # Authentication
 
 IDP and Base API URLS
