@@ -7,6 +7,10 @@ Live:
 ``` html
 <img src="[url](https://myoctocat.com/assets/images/base-octocat.svg)" alt="alternatetext"> 
 https://myoctocat.com/assets/images/base-octocat.svg)
+Swagger: https://sandboxapi01.papercloudelite.co.uk/swagger 
+Base URL: https://sandboxapi01.papercloudelite.co.uk 
+Auth URL: https://idpsandbox01.papercloudelite.co.uk/connect/authorize 
+Token URL: https://idpsandbox01.papercloudelite.co.uk/connect/token 
 ```
 
 [Photo](https://myoctocat.com/assets/images/base-octocat.svg)
