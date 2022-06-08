@@ -79,45 +79,16 @@ Used for both Tabs and Boxes.
 
 Colour fields accept either the numerical value or the text value.
 
-``` html
-<body class='Colours'
-      <p>"<span style="color: #808080;">Grey</span>" = 0</p>
-      >
-```
+>- ![#808080](https://via.placeholder.com/15/f03c15/000000?text=+) `Grey = 0`
+>- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue = 1`
+>- ![#7F6000](https://via.placeholder.com/15/f03c15/000000?text=+) `Brown = 2`
+>- ![#FFA500](https://via.placeholder.com/15/f03c15/000000?text=+) `Orange = 3`
+>- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `Green = 4`
+>- ![#FFC0CB](https://via.placeholder.com/15/c5f015/000000?text=+) `Pink = 5`
+>- ![#800080](https://via.placeholder.com/15/c5f015/000000?text=+) `Purple = 6`
+>- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `Red = 7`
+>- ![#FFFF00](https://via.placeholder.com/15/c5f015/000000?text=+) `Yellow = 8`
 
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `Red = 7`
-- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `Green = 4`
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue = 1`
-
-
-    <p>"<span style="color: #808080;">Grey</span>" = 0</p>
-    <p>"<span style="color: #0000ff;">Blue</span>" = 1</p>
-    <p>"Brown" = 2</p>
-    <p>"Orange&rdquo; = 3</p>
-    <p>"Green" = 4</p>
-    <p>"Pink" =5</p>
-    <p>"Purple" = 6</p>
-    <p>"Red" = 7</p>
-    <p>"Yellow" = 8</p>
-
-
-&quot;Grey&quot; = 0
-
-&quot;Blue&quot; = 1
-
-&quot;Brown&quot; = 2
-
-&quot;Orange&quot; = 3
-
-&quot;Green&quot; = 4
-
-&quot;Pink&quot; =5
-
-&quot;Purple&quot; = 6
-
-&quot;Red&quot; = 7
-
-&quot;Yellow&quot; = 8
 
 ## Return codes
 
