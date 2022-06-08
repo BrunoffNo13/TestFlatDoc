@@ -380,7 +380,7 @@ ALSO NEED ROW ORDER asc to desc or other way?
 
 **],**
 ```
-## Pre-Requisites\linked items:
+### Pre-Requisites\linked items:
 
 - Check if a client exists by external reference
 - See cabinets (Flow1B)
@@ -395,7 +395,7 @@ In this example we are creating a client file with a partner and placing it with
 This endpoint is demoed via &quot;Flow1C&quot; of the ApiV2FlowGuide.
 
 Raw body structure:
-
+```
 **{**
 
 **&quot;clientType&quot;:**  **&quot;Person&quot;**** ,**
@@ -453,9 +453,9 @@ Raw body structure:
 **&quot;cabinetId&quot;:**  **0**
 
 **}**
-
+```
 Curl Example:
-
+```
 curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/v2/client/create&#39; \
 
 --header &#39;Content-Type: application/json&#39; \
@@ -525,7 +525,7 @@ curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/
   &quot;cabinetId&quot;: 2
 
 }&#39;
-
+```
 ## Create client file apply template:
 
 This call will create a client file in Papercloud and apply a pre created template from the template repository.
@@ -533,7 +533,7 @@ This call will create a client file in Papercloud and apply a pre created templa
 This endpoint is demoed via &quot;Flow1F&quot; of the ApiV2FlowGuide.
 
 Raw body structure:
-
+```
 **{**
 
 **&quot;clientId&quot;**** : **** 0 ****,**
@@ -569,9 +569,9 @@ Raw body structure:
 **}**
 
 **}**
-
+```
 Curl Example:
-
+```
 curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/v2/client/create&#39; \
 
 --header &#39;Content-Type: application/json&#39; \
@@ -615,21 +615,22 @@ curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/
   }
 
 }&#39;
+```
 
 ## Create client file define bespoke structure:
 
 This call will create a client file in Papercloud and apply bespoke structure e.g., tabs, rows, and boxes.
 
-COLOUIRS
+NKBCOLOUIRS
 
 This endpoint is demoed via &quot;Flow1D&quot; of the ApiV2FlowGuide.
 
 Within this example the client will be created with the following structure:
-
+NKB IMAGE
 ![](RackMultipart20220608-1-mjrzu0_html_72299ecdddd867f9.png)
 
 This is the body used to produce the client file:
-
+```
 **{**
 
      **&quot;clientType&quot;: ****&quot;Person&quot;,**
@@ -809,9 +810,10 @@ This is the body used to produce the client file:
     **]**
 
 **}**
+```
 
 Curl Example:
-
+```
 curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/v2/client/create&#39; \
 
 --header &#39;Content-Type: application/json&#39; \
@@ -1005,8 +1007,9 @@ curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/
     &quot;cabinetName&quot;: &quot;Cabinet 1&quot;
 
 }&#39;
+```
 
-# Jumping to an entity (ClientFile, Tab, Box, Page)
+## Jumping to an entity (ClientFile, Tab, Box, Page)
 
 A Jump is simply a means to send some defining data to the API that essentially drives the front end of Papercloud in context of the authenticated user.
 
@@ -1020,6 +1023,7 @@ The call to initiate a jump is as follows:
 
 The Body of this call should contain the following:
 
+```
 {
 
   &quot;elementType&quot;: &quot;&quot;,
@@ -1027,19 +1031,21 @@ The Body of this call should contain the following:
   &quot;elementId&quot;: -12345
 
 }
-
+```
 The element types accepted for this call are as follows:
 
-ClientFile **=** 3
+```
+- ClientFile **=** 3
 
-Tab **=** 4
+- Tab **=** 4
 
-Box **=** 6
+- Box **=** 6
 
-Paper **=** 7
+- Paper **=** 7
+```
 
 The endpoint also allows the jump to be initiated with the use of the ExternalReference, this is done with the following structure:
-
+```
 {
 
     &quot;elementType&quot;: 3,
@@ -1049,11 +1055,11 @@ The endpoint also allows the jump to be initiated with the use of the ExternalRe
     &quot;externalReference&quot;: &quot;String&quot;
 
 }
-
+```
 The elementId relates to the item that needs to be brought to the attention of the end user of Papercloud.
 
 Curl Example:
-
+```
 curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/messageHub/jump&#39; \
 
 --header &#39;Content-Type: application/json&#39; \
@@ -1069,8 +1075,8 @@ curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/
   &quot;elementId&quot;: 6
 
 }&#39;
-
-# Download a Paper item by ID
+```
+## Download a Paper item by ID
 
 Paper in Papercloud is the individual items contained within a document box. This could be a single image or Office Word Document as examples. This specific call provides the document for download to the caller.
 
@@ -1078,106 +1084,101 @@ This endpoint is demoed via &quot;Flow5C&quot; and &quot;Flow5D&quot; of the Api
 
 There are two version of the call, one returns the physical paper item that a user can download to view, e.g., a .docx document that the user could then &quot;Download&quot; in the browser for access. The other allows the return of the paper in Base64 format, this would be useful if the requestion application wanted to display\alter the document within their front-end application.
 
-## File version:
+### File version:
 
 ![](RackMultipart20220608-1-mjrzu0_html_cddde0afe3e50468.png)
 
 Required Parameter:
 
-- PaperID
+> - PaperID
 
 Curl Example:
-
+```
 curl **--**** location ****--** request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/paper/3892/download&#39; \
 
 **--** header &#39;Accept: application/octet-stream&#39; \
 
 **--** header &#39;Authorization: Bearer eyJhbGciOiJSUz…&#39;
-
-## Base64:
-
+```
+### Base64:
+NKB IMAGE
 ![](RackMultipart20220608-1-mjrzu0_html_f2e5c53b579842a4.png)
 
 Required Parameter:
 
-- PaperID
+> - PaperID
 
 Curl Example:
-
+```
 curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/paper/3892/downloadBase64&#39; \
 
 --header &#39;Accept: application/json&#39; \
 
 --header &#39;Authorization: Bearer eyJhbGciOiJSUzI1NiIs&#39;
-
-# Get client files with all Tabs, Rows and Boxes
+```
+## Get client files with all Tabs, Rows and Boxes
 
 This endpoint returns the entire structure of a client file.
 
 This endpoint is demoed via &quot;Flow4A&quot; of the ApiV2FlowGuide.
-
+NKB IMAGE
 ![](RackMultipart20220608-1-mjrzu0_html_ff7f2d4e441f15f9.png)
 
 Required Parameters:
 
-- Reference (ExternalReference)
-- shallow = false
+> - Reference (ExternalReference)
+> - shallow = false
 
 Curl Example:
-
+```
 curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/client/ref/JON123?shallow=false&#39; \
 
 --header &#39;Accept: application/json&#39; \
 
 --header &#39;Authorization: Bearer eyJhbGc…&#39;
-
-# Return all paper items within a box
+```
+## Return all paper items within a box
 
 This endpoint returns the contents of a document box.
-
+NKB IMAGE
 This endpoint is demoed via &quot;Flow5A&quot; of the ApiV2FlowGuide.
 
 ![](RackMultipart20220608-1-mjrzu0_html_46fd3fd3650f53f7.png)
 
 Required Parameters:
 
-- id (boxId)
-- shallow = false
+> - id (boxId)
+> - shallow = false
 
 Curl Example:
-
+```
 curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/paper/papersForBox/1163&#39; \
-
 --header &#39;Accept: application/json&#39; \
-
 --header &#39;Authorization: Bearer eyJhbGciO…&#39;
-
-# Download an entire box contents
+```
+## Download an entire box contents
 
 This endpoint is demoed via &quot;Flow5B&quot; of the ApiV2FlowGuide.
-
+NKB IMAGE
 ![](RackMultipart20220608-1-mjrzu0_html_2735e8ea484d4a55.png)
 
 Curl Example:
-
+```
 curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/boxes/1234/download?printable=false&#39; \
-
 --header &#39;Accept: application/octet-stream&#39;
-
 --header &#39;Authorization: Bearer eyJhbGciO…&#39;
+```
 
-# Retrieve items via tag search
+## Retrieve items via tag search
 
 This endpoint is demoed via &quot;Flow4B&quot; of the ApiV2FlowGuide.
-
+NKB IMAGE
 ![](RackMultipart20220608-1-mjrzu0_html_981706a552abea7f.png)
 
+```
 curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/v2/tags/search&#39; \
-
 --header &#39;Content-Type: application/json&#39; \
-
 --header &#39;Authorization: Bearer eyJhbGciO…&#39;
-
 --data-raw &#39;{
 
     &quot;ClientId&quot;: null,
@@ -1191,15 +1192,16 @@ curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/
     &quot;BoxTitle&quot;: null
 
 }&#39;
-
+```
 Tag searches can also be done within a client file, the endpoint for this is as below:
-
+NKBIMAGE
 ![](RackMultipart20220608-1-mjrzu0_html_9dff37d5094a1899.png)
 
 Responses:
 
-200 – a successful request will return a set of JSON WHAT ARE ELEMENT?
+> - 200 – a successful request will return a set of JSON WHAT ARE ELEMENT?
 
+```
 **[**
 
 **{**
@@ -1237,7 +1239,7 @@ Responses:
 **}**
 
 **]**
-
+```
 Example of multiple return items:
 
 SHOW EXAMPLES
