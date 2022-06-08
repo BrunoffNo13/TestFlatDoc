@@ -86,6 +86,14 @@ Colour fields accept either the numerical value or the text value.
       >
 ```
 
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
+
 
     <p>"<span style="color: #808080;">Grey</span>" = 0</p>
     <p>"<span style="color: #0000ff;">Blue</span>" = 1</p>
