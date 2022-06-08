@@ -94,9 +94,9 @@ Colour fields accept either the numerical value or the text value.
 
 To be done
 
-200 – indicates success – this will also return in some instances a confirmation of the data stored with some of the post endpoint e.g., if you post a client file the response will include the &quot;ClientFileID&quot; created for the file.
+>  200 – indicates success – this will also return in some instances a confirmation of the data stored with some of the post endpoint e.g., if you post a client file the response will include the &quot;ClientFileID&quot; created for the file.
 
-403 – generally this is a response type indicating something exists but the user does not have access to view\update it. E.g. trying to find a client that resides within a cabinet for which the user does not have access.
+>  403 – generally this is a response type indicating something exists but the user does not have access to view\update it. E.g. trying to find a client that resides within a cabinet for which the user does not have access.
 
 ## Param lengths
 
@@ -110,41 +110,41 @@ Dates should be provided in &quot;DD/MM/YYYY&quot; format e.g., &quot;23/02/2001
 
 PaperType lookup by extension:
 
-&quot;.tif&quot; or &quot;.tiff&quot; : 0
+>-&quot;.tif&quot; or &quot;.tiff&quot; : 0
 
-&quot;.doc&quot;: 1
+>-&quot;.doc&quot;: 1
 
-&quot;.xls&quot;: 2
+>-&quot;.xls&quot;: 2
 
-&quot;.txt&quot;: 3
+>-&quot;.txt&quot;: 3
 
-&quot;.pdf&quot;: 4
+>-&quot;.pdf&quot;: 4
 
-&quot;.msg&quot;: 5
+>-&quot;.msg&quot;: 5
 
-&quot;.mp3&quot;: 6
+>-&quot;.mp3&quot;: 6
 
-&quot;.ppt&quot;: 7
+>-&quot;.ppt&quot;: 7
 
-&quot;.jpg&quot; or &quot;.jpeg&quot; : 10
+>-&quot;.jpg&quot; or &quot;.jpeg&quot; : 10
 
-&quot;.docx&quot;: 11
+>-&quot;.docx&quot;: 11
 
-&quot;.xlsx&quot;: 12
+>-&quot;.xlsx&quot;: 12
 
-&quot;.pptx&quot;: 13
+>-&quot;.pptx&quot;: 13
 
-&quot;.wav&quot;: 14
+>-&quot;.wav&quot;: 14
 
-&quot;.zip&quot;: 15
+>-&quot;.zip&quot;: 15
 
-&quot;.xlsm&quot;: 16
+>-&quot;.xlsm&quot;: 16
 
-&quot;.dmsg&quot;: 17
+>-&quot;.dmsg&quot;: 17
 
-&quot;&quot;: 9
+>-&quot;&quot;: 9
 
-&quot;other&quot; : 8
+>-&quot;other&quot; : 8
 
 
 # Examples endpoint calls
@@ -159,12 +159,12 @@ This endpoint is demoed via &quot;Flow1A&quot; of the ApiV2FlowGuide.
 
 Required Parameters:
 
-- Reference – this is external unique reference for the client. Typically, the 3rd party&#39;s identification ID.
-- Shallow flag, when shallow is set to True this will return only contact data for the client file. When set to False – this will return client contact data as well as the structure within the client file (Tabs, Rows and boxes)
+>- Reference – this is external unique reference for the client. Typically, the 3rd party&#39;s identification ID.
+>- Shallow flag, when shallow is set to True this will return only contact data for the client file. When set to False – this will return client contact data as well as the structure within the client file (Tabs, Rows and boxes)
 
 Curl Example:
 
-curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/client/ref/JON123?shallow=true&#39; \
+>-curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/client/ref/JON123?shallow=true&#39; 
 
 --header &#39;Accept: application/json&#39; \
 
