@@ -186,14 +186,15 @@ These endpoints allow creation of client files within the Papercloud system. Str
 
 All calls use the same endpoint:
 
-![](RackMultipart20220608-1-mjrzu0_html_3abe90619609357e.png)
+NKBJPEG HERE
 
 The contents are dynamic, some basic examples have been supplied in the calls laid out within below sections.
 
-A explanation of all fields in found here, this version is for client type &quot;Person&quot;:
+A explanation of all fields is found here, this version is for client type &quot;Person&quot;:
 
-NEED LENGTHS
+NKB IMAGE???
 
+'''
 **{**
 
 **&quot;clientType&quot;:**  **&quot;Person&quot;**** ,--defines if the client is either a &quot;Person&quot; or &quot;other&quot; (Company)**
@@ -267,9 +268,10 @@ NEED LENGTHS
 **}**
 
 **}**
+'''
 
 Create a file of the type &quot;Other&quot;
-
+'''
 **{**
 
 **&quot;clientType&quot;:**  **&quot;Other&quot;**** , --defines if the client is either a &quot;Person&quot; or &quot;other&quot; (Company)**
@@ -319,7 +321,7 @@ Create a file of the type &quot;Other&quot;
 **&quot;mergeTemplateWithExistingStructure&quot;:**  **true**
 
 **}**
-
+'''
 To apply structure within this endpoint create the following section can be included within the body, this is fully optional – for a clearer example see XXXXX:
 
 ALSO NEED ROW ORDER asc to desc or other way?
