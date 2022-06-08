@@ -64,7 +64,6 @@ A set of flows have been created to detail the core exposed functionality of the
 >   - Client Create Client and apply and existing template
 >     - Flow1E – Template Get List
 >     - Flow 1F - Client Create Client and apply template
-
 > - Flow 2 - Adding Structure
 >   - Flow2A - Client Apply Template
 >     - Flow2B – Add a tab to a client file
