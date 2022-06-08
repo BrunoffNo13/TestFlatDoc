@@ -212,80 +212,45 @@ A explanation of all fields is found here, this version is for client type &quot
 
 NKB IMAGE???
 
-```
-**{**
+```json
+{
+  "clientType": "Person",--defines if the client is either a “Person” or “other” (Company)
+  "notes": "string", --OPTIONAL (Any entry is displayed within the client file)
+  "primaryContactExternalReference": "string", --OPTIONAL though advised (created a link between 3rd party system and Papercloud via the unique identifier from the 3rd party)
+  "primaryContactTitle": "string", --OPTIONAL
+  "primaryContactFirstName": "string", --OPTIONAL
+  "primaryContactSurname": "string", --OPTIONAL
+  "primaryContactDateOfBirth": "2022-05-13", --OPTIONAL
+  "primaryContactNINumber": "string", --OPTIONAL
+  "secondaryContactExternalReference": "string", --OPTIONAL
+  "secondaryContactTitle": "string", --OPTIONAL
+  "secondaryContactFirstName": "string", --OPTIONAL
+  "secondaryContactSurname": "string", --OPTIONAL
+  "secondaryContactDateOfBirth": "2022-05-31", --OPTIONAL
+  "secondaryContactNINumber": "string", --OPTIONAL
+  "phoneNumber1": "string", --OPTIONAL
+  "phoneNumber2": "string", --OPTIONAL
+  "phoneNumber3": "string", --OPTIONAL
+  "parentFileExternalReference": "string", --OPTIONAL (creates a link to another file)
+  "addressLine1": "string", --OPTIONAL
+  "addressLine2": "string", --OPTIONAL
+  "addressLine3": "string", --OPTIONAL
+  "addressLine4": "string", --OPTIONAL
+  "addressLine5": "string", --OPTIONAL
+  "postcode": "string", --OPTIONAL
+  "emails": [ --OPTIONAL (comma separated list of email addresses for the client)
+    "string"
+  ], 
+  "cabinetId": 0, --OPTIONAL (define the cabinet that the client should be placed in – blank\not included creates the client outside of a cabinet)
+  "cabinetName": "string", --OPTIONAL
+  "cabinetExternalReference": "string", --OPTIONAL
+  "templateParameters": { --OPTIONAL (allows you to define and apply a template at create)
+    "templateId": 0, --Provide the ID of the template you wish to apply
+    "templateTitle": "string",
+    "mergeTemplateWithExistingStructure": true –-REQUIRED (do you want to add duplicates or ignore them?)
+  }
+}
 
-**&quot;clientType&quot;:**  **&quot;Person&quot;**** ,--defines if the client is either a &quot;Person&quot; or &quot;other&quot; (Company)**
-
-**&quot;notes&quot;:**  **&quot;string&quot;**** , --OPTIONAL (Any entry is displayed within the client file)**
-
-**&quot;primaryContactExternalReference&quot;:**  **&quot;string&quot;**** , --OPTIONAL though advised (created a link between 3 ****rd**  **party system and Papercloud via the unique identifier from the 3**** rd **** party)**
-
-**&quot;primaryContactTitle&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;primaryContactFirstName&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;primaryContactSurname&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;primaryContactDateOfBirth&quot;:**  **&quot;2022-05-13&quot;**** , --OPTIONAL**
-
-**&quot;primaryContactNINumber&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;secondaryContactExternalReference&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;secondaryContactTitle&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;secondaryContactFirstName&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;secondaryContactSurname&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;secondaryContactDateOfBirth&quot;:**  **&quot;2022-05-31&quot;**** , --OPTIONAL**
-
-**&quot;secondaryContactNINumber&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;phoneNumber1&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;phoneNumber2&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;phoneNumber3&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;parentFileExternalReference&quot;:**  **&quot;string&quot;**** , --OPTIONAL (creates a link to another file)**
-
-**&quot;addressLine1&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;addressLine2&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;addressLine3&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;addressLine4&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;addressLine5&quot;:**  **&quot;string&quot;**** , ****--OPTIONAL**
-
-**&quot;postcode&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;emails&quot;: [ --OPTIONAL (comma separated list of email addresses for the client)**
-
-**&quot;string&quot;**
-
-**],**
-
-**&quot;cabinetId&quot;:**  **0**** , --OPTIONAL (define the cabinet that the client should be placed in – blank\not included creates the client outside of a cabinet)**
-
-**&quot;cabinetName&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;cabinetExternalReference&quot;:**  **&quot;string&quot;**** , --OPTIONAL**
-
-**&quot;templateParameters&quot;: { --OPTIONAL (allows you to define and apply a template at create)**
-
-**&quot;templateId&quot;:**  **0**** , --Provide the ID of the template you wish to apply**
-
-**&quot;templateTitle&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;mergeTemplateWithExistingStructure&quot;:**  **true** **–-REQUIRED (do you want to add duplicates or ignore them?)**
-
-**}**
-
-**}**
 ```
 
 Create a file of the type &quot;Other&quot;
