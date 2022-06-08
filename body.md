@@ -2,14 +2,6 @@
 
 IDP and Base API URLS
 
-<dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
-
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
-</dl>
-
 Live:
 
 >Swagger: [https://api.papercloudelite.co.uk/swagger](https://api.papercloudelite.co.uk/swagger)
