@@ -60,18 +60,16 @@ A set of flows have been created to detail the core exposed functionality of the
 
 Note the variables within the flow document point to the sandbox:
 
-# ![](RackMultipart20220608-1-mjrzu0_html_2c8ab4abc69b8203.gif)
-
 # Connect config for use with the Sandbox
 
 With WatermarkConnect closed the below file should be placed in the following location:
 
 C:\Program Files\WatermarkTech\WatermarkConnect
 
-![](RackMultipart20220608-1-mjrzu0_html_10af5c07d58b3ac2.gif)
+NEED FILE
 
-1.
-# Generic attributes
+
+## Generic attributes
 
 These attributes are generic across the API calls.
 
