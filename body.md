@@ -73,7 +73,7 @@ NEED FILE
 
 These attributes are generic across the API calls.
 
-# Colours
+## Colours
 
 Used for both Tabs and Boxes.
 
@@ -97,7 +97,7 @@ Colour fields accept either the numerical value or the text value.
 
 &quot;Yellow&quot; = 8
 
-# Return codes
+## Return codes
 
 To be done
 
@@ -105,15 +105,15 @@ To be done
 
 403 – generally this is a response type indicating something exists but the user does not have access to view\update it. E.g. trying to find a client that resides within a cabinet for which the user does not have access.
 
-# Param lengths
+## Param lengths
 
 These are listed on the swagger documentation.
 
-# Date format
+## Date format
 
 Dates should be provided in &quot;DD/MM/YYYY&quot; format e.g., &quot;23/02/2001&quot;. There is not time requirement on the API.
 
-# Paper Types
+## Paper Types
 
 PaperType lookup by extension:
 
@@ -153,10 +153,10 @@ PaperType lookup by extension:
 
 &quot;other&quot; : 8
 
-1.
+
 # Examples endpoint calls
 
-# Check if a client exists by external reference
+## Check if a client exists by external reference
 
 This endpoint confirms if a client already exists. This endpoint has an option shallow call
 
