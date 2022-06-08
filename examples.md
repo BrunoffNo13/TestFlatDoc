@@ -5,15 +5,7 @@ Authentication
 Live:
 
 ``` html
-<div class='section'>
-<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><br></p>
-<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:36.0pt;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>Swagger: <a href="https://api.papercloudelite.co.uk/swagger">https://api.papercloudelite.co.uk/swagger</a>&nbsp;</p>
-<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:36.0pt;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>Base URL: <a href="https://api.papercloudelite.co.uk/">https://api.papercloudelite.co.uk/</a></p>
-<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:36.0pt;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>Auth URL: <a href="https://idp.papercloudelite.co.uk/connect/authorize">https://idp.papercloudelite.co.uk<span style='font-size:12px;line-height:107%;font-family:"Helvetica",sans-serif;background:white;'>/connect/authorize</span></a><u><span style='font-size:12px;line-height:107%;font-family:"Helvetica",sans-serif;color:#0563C1;background:white;'>&nbsp;</span></u><span style='font-size:12px;line-height:107%;font-family:"Helvetica",sans-serif;color:#212121;background:white;'>&nbsp;</span></p>
-<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:36.0pt;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:12px;line-height:107%;font-family:"Helvetica",sans-serif;color:#212121;background:white;'>Token URL:&nbsp;</span><a href="https://idp.papercloudelite.co.uk/connect/token">https://idp.papercloudelite.co.uk<span style='font-size:12px;line-height:107%;font-family:"Helvetica",sans-serif;background:white;'>/connect/token</span></a><u><span style='font-size:12px;line-height:107%;font-family:"Helvetica",sans-serif;color:#0563C1;background:white;'>&nbsp;</span></u><span style='font-size:12px;line-height:107%;font-family:"Helvetica",sans-serif;color:#212121;background:white;'>&nbsp;&nbsp;</span></p>
-<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><br></p>
-</div>
+<body class='Swagger: https://api.papercloudelite.co.uk/swagger'>
 ```
 
 
