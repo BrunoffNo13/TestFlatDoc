@@ -3,7 +3,7 @@
 
 IDP and Base API URLS
 
-### Live:
+### Live
 
 Swagger: [https://api.papercloudelite.co.uk/swagger](https://api.papercloudelite.co.uk/swagger)
 
@@ -13,7 +13,7 @@ Auth URL: [https://idp.papercloudelite.co.uk/connect/authorize](https://idp.pape
 
 Token URL: [https://idp.papercloudelite.co.uk/connect/token](https://idp.papercloudelite.co.uk/connect/token)
 
-### Sandbox:
+### Sandbox
 
 Swagger: [https://sandboxapi01.papercloudelite.co.uk/swagger](https://sandboxapi01.papercloudelite.co.uk/swagger)
 
