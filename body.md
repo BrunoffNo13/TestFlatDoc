@@ -368,6 +368,7 @@ Raw body structure:
   "cabinetId": 0
 
 ```
+
 Curl Example:
 ```bash
 
@@ -407,7 +408,7 @@ curl --location --request POST 'https://apihotfix.papercloudelite.co.uk/api/v2/c
   "cabinetId": 2
 }'
 
-``
+```
 
 ## Create client file apply template:
 
