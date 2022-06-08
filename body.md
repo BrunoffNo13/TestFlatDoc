@@ -66,7 +66,7 @@ With WatermarkConnect closed the below file should be placed in the following lo
 
 C:\Program Files\WatermarkTech\WatermarkConnect
 
-NEED FILE
+NKB NEED FILE
 
 
 # Generic attributes
@@ -1385,3 +1385,10 @@ Also this documentation can&#39;t be considered as descriptive enough as
 - Take example of Flow 4 B, in case there more than one documents in a box matching tag, no idea how response will be returned, as a array or each record will be listed in a flat structure.
 
 In general for a publically available apis, documentation should be much more thorough.
+
+
+# Quick Guides
+## Setting up an app in Papercloud
+## Exporting and importing Swagger (Postman)
+## Make REST API calls
+NKB
