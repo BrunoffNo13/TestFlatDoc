@@ -122,6 +122,8 @@ To be done
 
 >  200 – indicates success – this will also return in some instances a confirmation of the data stored with some of the post endpoint e.g., if you post a client file the response will include the &quot;ClientFileID&quot; created for the file.
 
+>  204 – Specifically for deletes, a return with this code indicates success
+
 >  403 – generally this is a response type indicating something exists but the user does not have access to view\update it. E.g. trying to find a client that resides within a cabinet for which the user does not have access.
 
 ## Param lengths
@@ -334,137 +336,79 @@ In this example we are creating a client file with a partner and placing it with
 This endpoint is demoed via &quot;Flow1C&quot; of the ApiV2FlowGuide.
 
 Raw body structure:
-```
-**{**
+```json
 
-**&quot;clientType&quot;:**  **&quot;Person&quot;**** ,**
+{
+  "clientType": "Person",
+  "notes": "string",
+  "primaryContactExternalReference": "string",
+  "primaryContactTitle": "string",
+  "primaryContactFirstName": "string",
+  "primaryContactSurname": "string",
+  "primaryContactDateOfBirth": "2022-05-19T14:58:03.982Z",
+  "primaryContactNINumber": "string",
+  "secondaryContactExternalReference": "string",
+  "secondaryContactTitle": "string",
+  "secondaryContactFirstName": "string",
+  "secondaryContactSurname": "string",
+  "secondaryContactDateOfBirth": "2022-05-19T14:58:03.982Z",
+  "secondaryContactNINumber": "string",
+  "phoneNumber1": "string",
+  "phoneNumber2": "string",
+  "phoneNumber3": "string",
+  "addressLine1": "string",
+  "addressLine2": "string",
+  "addressLine3": "string",
+  "addressLine4": "string",
+  "addressLine5": "string",
+  "postcode": "string",
+  "emails": [
+    "string"
+  ],
+  "cabinetId": 0
 
-**&quot;notes&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;primaryContactExternalReference&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;primaryContactTitle&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;primaryContactFirstName&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;primaryContactSurname&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;primaryContactDateOfBirth&quot;:**  **&quot;2022-05-19T14:58:03.982Z&quot;**** ,**
-
-**&quot;primaryContactNINumber&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;secondaryContactExternalReference&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;secondaryContactTitle&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;secondaryContactFirstName&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;secondaryContactSurname&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;secondaryContactDateOfBirth&quot;:**  **&quot;2022-05-19T14:58:03.982Z&quot;**** ,**
-
-**&quot;secondaryContactNINumber&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;phoneNumber1&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;phoneNumber2&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;phoneNumber3&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;addressLine1&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;addressLine2&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;addressLine3&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;addressLine4&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;addressLine5&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;postcode&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;emails&quot;: [**
-
-**&quot;string&quot;**
-
-**],**
-
-**&quot;cabinetId&quot;:**  **0**
-
-**}**
 ```
 Curl Example:
-```
-curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/v2/client/create&#39; \
+```bash
 
---header &#39;Content-Type: application/json&#39; \
-
---header &#39;Accept: application/json&#39; \
-
---header &#39;Authorization: Bearer eyJhbGci…&#39; \
-
---data-raw &#39;{
-
-  &quot;clientType&quot;: &quot;Person&quot;,
-
-  &quot;fileName&quot;: &quot;&quot;,
-
-  &quot;notes&quot;: &quot;Some notes relating to the client file&quot;,
-
-  &quot;primaryContactExternalReference&quot;: &quot;REF12345&quot;,
-
-  &quot;primaryContactTitle&quot;: &quot;Mr&quot;,
-
-  &quot;primaryContactFirstName&quot;: &quot;Mickey&quot;,
-
-  &quot;primaryContactSurname&quot;: &quot;Mounse&quot;,
-
-  &quot;primaryContactDateOfBirth&quot;: &quot;2008-10-06&quot;,
-
-  &quot;primaryContactNINumber&quot;: &quot;NI1234&quot;,
-
-  &quot;secondaryContactExternalReference&quot;: &quot;REF12346&quot;,
-
-  &quot;secondaryContactTitle&quot;: &quot;Mrs&quot;,
-
-  &quot;secondaryContactFirstName&quot;: &quot;Minnie&quot;,
-
-  &quot;secondaryContactSurname&quot;: &quot;Mouse&quot;,
-
-  &quot;secondaryContactDateOfBirth&quot;: &quot;1991-04-05&quot;,
-
-  &quot;secondaryContactNINumber&quot;: &quot;NI12346&quot;,
-
-  &quot;phoneNumber1&quot;: &quot;01131234567&quot;,
-
-  &quot;phoneNumber2&quot;: &quot;01131234568&quot;,
-
-  &quot;phoneNumber3&quot;: &quot;01131234569&quot;,
-
-  &quot;addressLine1&quot;: &quot;do reprehenderit cillum magna&quot;,
-
-  &quot;addressLine2&quot;: &quot;anim nulla quis&quot;,
-
-  &quot;addressLine3&quot;: &quot;cillum in in Ut elit&quot;,
-
-  &quot;addressLine4&quot;: &quot;fugiat&quot;,
-
-  &quot;addressLine5&quot;: &quot;sed magna&quot;,
-
-  &quot;postcode&quot;: &quot;BD18 3ST&quot;,
-
-  &quot;emails&quot;: [
-
-    &quot;test@test123.com,&quot;,
-
-    &quot;Another@1234.com&quot;
-
+curl --location --request POST 'https://apihotfix.papercloudelite.co.uk/api/v2/client/create' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJhbGci…' \
+--data-raw '{
+  "clientType": "Person",
+  "fileName": "",
+  "notes": "Some notes relating to the client file",
+  "primaryContactExternalReference": "REF12345",
+  "primaryContactTitle": "Mr",
+  "primaryContactFirstName": "Mickey",
+  "primaryContactSurname": "Mounse",
+  "primaryContactDateOfBirth": "2008-10-06",
+  "primaryContactNINumber": "NI1234",
+  "secondaryContactExternalReference": "REF12346",
+  "secondaryContactTitle": "Mrs",
+  "secondaryContactFirstName": "Minnie",
+  "secondaryContactSurname": "Mouse",
+  "secondaryContactDateOfBirth": "1991-04-05",
+  "secondaryContactNINumber": "NI12346",
+  "phoneNumber1": "01131234567",
+  "phoneNumber2": "01131234568",
+  "phoneNumber3": "01131234569",
+  "addressLine1": "do reprehenderit cillum magna",
+  "addressLine2": "anim nulla quis",
+  "addressLine3": "cillum in in Ut elit",
+  "addressLine4": "fugiat",
+  "addressLine5": "sed magna",
+  "postcode": "BD18 3ST",
+  "emails": [
+    "test@test123.com,",
+    "Another@1234.com"
   ],
+  "cabinetId": 2
+}'
 
-  &quot;cabinetId&quot;: 2
+``
 
-}&#39;
-```
 ## Create client file apply template:
 
 This call will create a client file in Papercloud and apply a pre created template from the template repository.
@@ -472,88 +416,54 @@ This call will create a client file in Papercloud and apply a pre created templa
 This endpoint is demoed via &quot;Flow1F&quot; of the ApiV2FlowGuide.
 
 Raw body structure:
-```
-**{**
+```json
 
-**&quot;clientId&quot;**** : **** 0 ****,**
+{
+  "clientId": 0,
+  "clientType": "Person",
+  "fileName": "string",
+  "notes": "string",
+  "primaryContactExternalReference": "string",
+  "primaryContactTitle": "string",
+  "primaryContactFirstName": "string",
+  "primaryContactSurname": "string",
+  "primaryContactDateOfBirth": "2022-05-19T14:58:03.982Z",
+  "primaryContactNINumber": "string",
+  "cabinetId": 0,
+  "templateParameters": {
+    "templateId": 0,
+    "templateTitle": "string",
+    "mergeTemplateWithExistingStructure": true
+  }
+}
 
-**&quot;clientType&quot;**** : ****&quot;Person&quot; ****,**
-
-**&quot;fileName&quot;**** : ****&quot;string&quot; ****,**
-
-**&quot;notes&quot;**** : ****&quot;string&quot; ****,**
-
-**&quot;primaryContactExternalReference&quot;**** : ****&quot;string&quot; ****,**
-
-**&quot;primaryContactTitle&quot;**** : ****&quot;string&quot; ****,**
-
-**&quot;primaryContactFirstName&quot;**** : ****&quot;string&quot; ****,**
-
-**&quot;primaryContactSurname&quot;**** : ****&quot;string&quot; ****,**
-
-**&quot;primaryContactDateOfBirth&quot;**** : ****&quot;2022-05-19T14:58:03.982Z&quot; ****,**
-
-**&quot;primaryContactNINumber&quot;**** : ****&quot;string&quot; ****,**
-
-**&quot;cabinetId&quot;**** : **** 0 ****,**
-
-**&quot;templateParameters&quot;**** : {**
-
-**&quot;templateId&quot;**** : **** 0 ****,**
-
-**&quot;templateTitle&quot;**** : ****&quot;string&quot; ****,**
-
-**&quot;mergeTemplateWithExistingStructure&quot;**** : **** true**
-
-**}**
-
-**}**
 ```
 Curl Example:
-```
-curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/v2/client/create&#39; \
+```bash
 
---header &#39;Content-Type: application/json&#39; \
-
---header &#39;Accept: application/json&#39; \
-
---header &#39;Authorization: Bearer eyJhbGc…&#39; \
-
---data-raw &#39;{
-
-    &quot;clientType&quot;: &quot;Person&quot;,
-
-    &quot;fileName&quot;: &quot;&quot;,
-
-    &quot;notes&quot;: null,
-
-    &quot;primaryContactExternalReference&quot;: &quot;&quot;,
-
-    &quot;primaryContactTitle&quot;: &quot;Mr&quot;,
-
-    &quot;primaryContactFirstName&quot;: &quot;Template 7&quot;,
-
-    &quot;primaryContactSurname&quot;: &quot;Test 7&quot;,
-
-    &quot;primaryContactDateOfBirth&quot;: null,
-
-    &quot;primaryContactNINumber&quot;: &quot;&quot;,
-
-    &quot;cabinetId&quot;: 1,
-
-    &quot;cabinetName&quot;: &quot;Cabinet 1&quot;,
-
-       &quot;templateParameters&quot;: {
-
-    &quot;templateId&quot;: 3,
-
-    &quot;templateTitle&quot;: &quot;test&quot;,
-
-    &quot;mergeTemplateWithExistingStructure&quot;: true
-
+curl --location --request POST 'https://apihotfix.papercloudelite.co.uk/api/v2/client/create' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJhbGc…' \
+--data-raw '{
+    "clientType": "Person",
+    "fileName": "",
+    "notes": null,
+    "primaryContactExternalReference": "",
+    "primaryContactTitle": "Mr",
+    "primaryContactFirstName": "Template 7",
+    "primaryContactSurname": "Test 7",
+    "primaryContactDateOfBirth": null,
+    "primaryContactNINumber": "",
+    "cabinetId": 1,
+    "cabinetName": "Cabinet 1",
+       "templateParameters": {
+    "templateId": 3,
+    "templateTitle": "test",
+    "mergeTemplateWithExistingStructure": true
   }
+}'
 
-}&#39;
 ```
 
 ## Create client file define bespoke structure:
@@ -565,387 +475,209 @@ NKBCOLOUIRS
 This endpoint is demoed via &quot;Flow1D&quot; of the ApiV2FlowGuide.
 
 Within this example the client will be created with the following structure:
+
 NKB IMAGE
 ![](RackMultipart20220608-1-mjrzu0_html_72299ecdddd867f9.png)
 
 This is the body used to produce the client file:
-```
-**{**
+```json
+
+{
+    "clientType": "Person",
+    "notes": "Add some notes to the client file",
+    "primaryContactExternalReference": "REF123454",
+    "primaryContactTitle": "Mr",
+    "primaryContactFirstName": "John",
+    "primaryContactSurname": "Smith",
+    "primaryContactDateOfBirth": "01/02/1985",
+    "primaryContactNINumber": "NI1234344",
+    "tabs": [
+        {
+            "title": "Insurance",
+            "position": 0,
+            "colour": 2,
+            "rows": [
+                {
+                    "title": "T1-R1",
+                    "position": 0,
+                    "boxes": [
+                        {
+                            "title": "T1-R1-B1",
+                            "tags": [
+                                "TAG_12ABC"
+                            ]
+                        },
+                        {
+                            "title": "T1-R1-B2"
+                        }
+                    ]
+                },
+                {
+                    "title": "T1-R2",
+                    "position": 0,
+                    "boxes": [
+                        {
+                            "title": "T1-R2-B1"
+                        },
+                        {
+                            "title": "T1-R2-B2"
+                        },
+                        {
+                            "title": "T1-R2-B3"
+                        },
+                        {
+                            "title": "T1-R2-B4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Forecast",
+            "position": 1,
+            "colour": 5,
+            "rows": [
+                {
+                    "title": "T2-R1",
+                    "position": 0,
+                    "boxes": [
+                        {
+                            "title": "T2-R1-B1"
+                        },
+                        {
+                            "title": "T2-R1-B2"
+                        }
+                    ]
+                },
+                {
+                    "title": "T2-R2",
+                    "position": 0,
+                    "boxes": [
+                        {
+                            "title": "T2-R2-B1"
+                        },
+                        {
+                            "title": "T2-R2-B2",
+                            "tags": [
+                                "TAG_12ABC",
+                                "TAG_34DEF"
+                            ]
+                        },
+                        {
+                            "title": "T2-R2-B3"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
 
-     **&quot;clientType&quot;: ****&quot;Person&quot;,**
 
-     **&quot;notes&quot;: ****&quot;Add some notes to the client file&quot; ****,**
-
-     **&quot;primaryContactExternalReference&quot;: ****&quot;REF123454&quot; ****,**
-
-     **&quot;primaryContactTitle&quot;:****  &quot;Mr&quot; ****,**
-
-     **&quot;primaryContactFirstName&quot;: ****&quot;John&quot; ****,**
-
-     **&quot;primaryContactSurname&quot;: &quot;**** Smith ****&quot;,**
-
-     **&quot;primaryContactDateOfBirth&quot;: &quot;**** 01/02/1985 ****&quot;,**
-
-     **&quot;primaryContactNINumber&quot;: &quot;**** NI1234344 ****&quot;,**
-
-    **&quot;tabs&quot;: [**
-
-         **{**
-
-             **&quot;title&quot;: &quot;**** Insurance ****&quot;,**
-
-             **&quot;position&quot;: **** 0 ****,**
-
-             **&quot;colour&quot;: **** 2 ****,**
-
-            **&quot;rows&quot;: [**
-
-                 **{**
-
-                     **&quot;title&quot;: &quot;**** T1-R1 ****&quot;,**
-
-                     **&quot;position&quot;: **** 0 ****,**
-
-                    **&quot;boxes&quot;: [**
-
-                         **{**
-
-                             **&quot;title&quot;: &quot;**** T1-R1-B1 ****&quot;,**
-
-                            **&quot;tags&quot;: [**
-
-                                 **&quot;**** TAG\_12ABC ****&quot;**
-
-                            **]**
-
-                         **},**
-
-                         **{**
-
-                             **&quot;title&quot;: &quot;**** T1-R1-B2 ****&quot;**
-
-                         **}**
-
-                    **]**
-
-                 **},**
-
-                 **{**
-
-                     **&quot;title&quot;: &quot;**** T1-R2 ****&quot;,**
-
-                     **&quot;position&quot;: **** 0 ****,**
-
-                    **&quot;boxes&quot;: [**
-
-                         **{**
-
-                             **&quot;title&quot;: ****&quot;T1-R2-B1&quot;**
-
-                         **},**
-
-                         **{**
-
-                             **&quot;title&quot;: ****&quot;T1-R2-B2&quot;**
-
-                         **},**
-
-                         **{**
-
-                             **&quot;title&quot;: ****&quot;T1-R2-B3&quot;**
-
-                         **},**
-
-                         **{**
-
-                             **&quot;title&quot;: ****&quot;T1-R2-B4&quot;**
-
-                         **}**
-
-                    **]**
-
-                 **}**
-
-            **]**
-
-         **},**
-
-         **{**
-
-             **&quot;title&quot;: &quot;**** Forecast ****&quot;,**
-
-             **&quot;position&quot;: **** 1 ****,**
-
-             **&quot;colour&quot;: **** 5 ****,**
-
-            **&quot;rows&quot;: [**
-
-                 **{**
-
-                     **&quot;title&quot;: &quot;**** T2-R1 ****&quot;,**
-
-                     **&quot;position&quot;: **** 0 ****,**
-
-                    **&quot;boxes&quot;: [**
-
-                         **{**
-
-                             **&quot;title&quot;: &quot;**** T2-R1-B1 ****&quot;**
-
-                         **},**
-
-                         **{**
-
-                             **&quot;title&quot;: &quot;**** T2-R1-B2 ****&quot;**
-
-                         **}**
-
-                    **]**
-
-                 **},**
-
-                 **{**
-
-                     **&quot;title&quot;: &quot;**** T2-R2 ****&quot;,**
-
-                     **&quot;position&quot;: **** 0 ****,**
-
-                    **&quot;boxes&quot;: [**
-
-                         **{**
-
-                             **&quot;title&quot;: &quot;**** T2-R2-B1 ****&quot;**
-
-                         **},**
-
-                         **{**
-
-                             **&quot;title&quot;: &quot;**** T2-R2-B2 ****&quot;,**
-
-                            **&quot;tags&quot;: [**
-
-                                 **&quot;**** TAG\_12ABC ****&quot;,**
-
-                                 **&quot;**** TAG\_34DEF ****&quot;**
-
-                            **]**
-
-                         **},**
-
-                         **{**
-
-                             **&quot;title&quot;: &quot;**** T2-R2-B3 ****&quot;**
-
-                         **}**
-
-                    **]**
-
-                 **}**
-
-            **]**
-
-         **}**
-
-    **]**
-
-**}**
 ```
 
 Curl Example:
-```
-curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/v2/client/create&#39; \
+```bash
 
---header &#39;Content-Type: application/json&#39; \
-
---header &#39;Accept: application/json&#39; \
-
---header &#39;Authorization: Bearer eyJhbGciOi…\
-
---data-raw &#39;{
-
-    &quot;clientType&quot;: &quot;Person&quot;,
-
-    &quot;fileName&quot;: &quot;&quot;,
-
-    &quot;notes&quot;: null,
-
-    &quot;primaryContactExternalReference&quot;: &quot;&quot;,
-
-    &quot;primaryContactTitle&quot;: &quot;Mr&quot;,
-
-    &quot;primaryContactFirstName&quot;: &quot;Template 7&quot;,
-
-    &quot;primaryContactSurname&quot;: &quot;Test 7&quot;,
-
-    &quot;primaryContactDateOfBirth&quot;: null,
-
-    &quot;primaryContactNINumber&quot;: &quot;&quot;,
-
-    &quot;tabs&quot;: [
-
+curl --location --request POST 'https://apihotfix.papercloudelite.co.uk/api/v2/client/create' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJhbGciOi…\
+--data-raw '{
+    "clientType": "Person",
+    "fileName": "",
+    "notes": null,
+    "primaryContactExternalReference": "",
+    "primaryContactTitle": "Mr",
+    "primaryContactFirstName": "Template 7",
+    "primaryContactSurname": "Test 7",
+    "primaryContactDateOfBirth": null,
+    "primaryContactNINumber": "",
+    "tabs": [
         {
-
-            &quot;title&quot;: &quot;T1&quot;,
-
-            &quot;position&quot;: 0,
-
-            &quot;colour&quot;: 2,
-
-            &quot;rows&quot;: [
-
+            "title": "T1",
+            "position": 0,
+            "colour": 2,
+            "rows": [
                 {
-
-                    &quot;title&quot;: &quot;T1-R1&quot;,
-
-                    &quot;position&quot;: 0,
-
-                    &quot;boxes&quot;: [
-
+                    "title": "T1-R1",
+                    "position": 0,
+                    "boxes": [
                         {
-
-                            &quot;title&quot;: &quot;T1-R1-B1&quot;,
-
-                            &quot;tags&quot;: [
-
-                                &quot;TAG\_12ABC&quot;
-
+                            "title": "T1-R1-B1",
+                            "tags": [
+                                "TAG_12ABC"
                             ]
-
                         },
-
                         {
-
-                            &quot;title&quot;: &quot;T1-R1-B2&quot;
-
+                            "title": "T1-R1-B2"
                         }
-
                     ]
-
                 },
-
                 {
-
-                    &quot;title&quot;: &quot;T1-R2&quot;,
-
-                    &quot;position&quot;: 0,
-
-                    &quot;boxes&quot;: [
-
+                    "title": "T1-R2",
+                    "position": 0,
+                    "boxes": [
                         {
-
-                            &quot;title&quot;: &quot;T1-R2-B1&quot;
-
+                            "title": "T1-R2-B1"
                         },
-
                         {
-
-                            &quot;title&quot;: &quot;T1-R2-B2&quot;
-
+                            "title": "T1-R2-B2"
                         },
-
                         {
-
-                            &quot;title&quot;: &quot;T1-R2-B3&quot;
-
+                            "title": "T1-R2-B3"
                         },
-
                         {
-
-                            &quot;title&quot;: &quot;T1-R2-B4&quot;
-
+                            "title": "T1-R2-B4"
                         }
-
                     ]
-
                 }
-
             ]
-
         },
-
         {
-
-            &quot;title&quot;: &quot;T2&quot;,
-
-            &quot;position&quot;: 1,
-
-            &quot;colour&quot;: 5,
-
-            &quot;rows&quot;: [
-
+            "title": "T2",
+            "position": 1,
+            "colour": 5,
+            "rows": [
                 {
-
-                    &quot;title&quot;: &quot;T2-R1&quot;,
-
-                    &quot;position&quot;: 0,
-
-                    &quot;boxes&quot;: [
-
+                    "title": "T2-R1",
+                    "position": 0,
+                    "boxes": [
                         {
-
-                            &quot;title&quot;: &quot;T2-R1-B1&quot;
-
+                            "title": "T2-R1-B1"
                         },
-
                         {
-
-                            &quot;title&quot;: &quot;T2-R1-B2&quot;
-
+                            "title": "T2-R1-B2"
                         }
-
                     ]
-
                 },
-
                 {
-
-                    &quot;title&quot;: &quot;T2-R2&quot;,
-
-                    &quot;position&quot;: 0,
-
-                    &quot;boxes&quot;: [
-
+                    "title": "T2-R2",
+                    "position": 0,
+                    "boxes": [
                         {
-
-                            &quot;title&quot;: &quot;T2-R2-B1&quot;
-
+                            "title": "T2-R2-B1"
                         },
-
                         {
-
-                            &quot;title&quot;: &quot;T2-R2-B2&quot;,
-
-                            &quot;tags&quot;: [
-
-                                &quot;TAG\_12ABC&quot;,
-
-                                &quot;TAG\_34DEF&quot;
-
+                            "title": "T2-R2-B2",
+                            "tags": [
+                                "TAG_12ABC",
+                                "TAG_34DEF"
                             ]
-
                         },
-
                         {
-
-                            &quot;title&quot;: &quot;T2-R2-B3&quot;
-
+                            "title": "T2-R2-B3"
                         }
-
                     ]
-
                 }
-
             ]
-
         }
-
     ],
+    "cabinetId": 1,
+    "cabinetName": "Cabinet 1"
+}'
 
-    &quot;cabinetId&quot;: 1,
 
-    &quot;cabinetName&quot;: &quot;Cabinet 1&quot;
-
-}&#39;
 ```
 
 ## Jumping to an entity (ClientFile, Tab, Box, Page)
@@ -962,14 +694,13 @@ The call to initiate a jump is as follows:
 
 The Body of this call should contain the following:
 
-```
+```json
+
 {
-
-  &quot;elementType&quot;: &quot;&quot;,
-
-  &quot;elementId&quot;: -12345
-
+  "elementType": "",
+  "elementId": -12345
 }
+
 ```
 The element types accepted for this call are as follows:
 
@@ -984,36 +715,29 @@ The element types accepted for this call are as follows:
 ```
 
 The endpoint also allows the jump to be initiated with the use of the ExternalReference, this is done with the following structure:
-```
+```json
+
 {
-
-    &quot;elementType&quot;: 3,
-
-    &quot;elementId&quot;: 0,
-
-    &quot;externalReference&quot;: &quot;String&quot;
-
+    "elementType": 3,
+    "elementId": 0,
+    "externalReference": "String"
 }
+
 ```
 The elementId relates to the item that needs to be brought to the attention of the end user of Papercloud.
 
 Curl Example:
-```
-curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/messageHub/jump&#39; \
+```bash
 
---header &#39;Content-Type: application/json&#39; \
+curl --location --request POST 'https://apihotfix.papercloudelite.co.uk/api/messageHub/jump' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJhbGci…'
+--data-raw '{
+  "elementType": "3",
+  "elementId": 6
+}'
 
---header &#39;Accept: application/json&#39; \
-
---header &#39;Authorization: Bearer eyJhbGci…&#39;
-
---data-raw &#39;{
-
-  &quot;elementType&quot;: &quot;3&quot;,
-
-  &quot;elementId&quot;: 6
-
-}&#39;
 ```
 ## Download a Paper item by ID
 
@@ -1032,12 +756,12 @@ Required Parameter:
 > - PaperID
 
 Curl Example:
-```
-curl **--**** location ****--** request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/paper/3892/download&#39; \
+```bash
 
-**--** header &#39;Accept: application/octet-stream&#39; \
+curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/paper/3892/download' \
+--header 'Accept: application/octet-stream' \
+--header 'Authorization: Bearer eyJhbGciOiJSUz…'
 
-**--** header &#39;Authorization: Bearer eyJhbGciOiJSUz…&#39;
 ```
 ### Base64:
 NKB IMAGE
@@ -1048,12 +772,12 @@ Required Parameter:
 > - PaperID
 
 Curl Example:
-```
-curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/paper/3892/downloadBase64&#39; \
+```bash
 
---header &#39;Accept: application/json&#39; \
+curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/paper/3892/downloadBase64' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIs'
 
---header &#39;Authorization: Bearer eyJhbGciOiJSUzI1NiIs&#39;
 ```
 ## Get client files with all Tabs, Rows and Boxes
 
@@ -1069,12 +793,12 @@ Required Parameters:
 > - shallow = false
 
 Curl Example:
-```
-curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/client/ref/JON123?shallow=false&#39; \
+```bash
 
---header &#39;Accept: application/json&#39; \
+curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/client/ref/JON123?shallow=false' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJhbGc…'
 
---header &#39;Authorization: Bearer eyJhbGc…&#39;
 ```
 ## Return all paper items within a box
 
@@ -1090,10 +814,13 @@ Required Parameters:
 > - shallow = false
 
 Curl Example:
-```
-curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/paper/papersForBox/1163&#39; \
---header &#39;Accept: application/json&#39; \
---header &#39;Authorization: Bearer eyJhbGciO…&#39;
+```bash
+
+curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/paper/papersForBox/1163' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJhbGciO…'
+
+
 ```
 ## Download an entire box contents
 
@@ -1102,10 +829,13 @@ NKB IMAGE
 ![](RackMultipart20220608-1-mjrzu0_html_2735e8ea484d4a55.png)
 
 Curl Example:
-```
-curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/boxes/1234/download?printable=false&#39; \
---header &#39;Accept: application/octet-stream&#39;
---header &#39;Authorization: Bearer eyJhbGciO…&#39;
+```bash
+
+curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/boxes/1234/download?printable=false' \
+--header 'Accept: application/octet-stream'
+--header 'Authorization: Bearer eyJhbGciO…'
+
+
 ```
 
 ## Retrieve items via tag search
@@ -1114,23 +844,19 @@ This endpoint is demoed via &quot;Flow4B&quot; of the ApiV2FlowGuide.
 NKB IMAGE
 ![](RackMultipart20220608-1-mjrzu0_html_981706a552abea7f.png)
 
-```
-curl --location --request POST &#39;https://apihotfix.papercloudelite.co.uk/api/v2/tags/search&#39; \
---header &#39;Content-Type: application/json&#39; \
---header &#39;Authorization: Bearer eyJhbGciO…&#39;
---data-raw &#39;{
+```bash
 
-    &quot;ClientId&quot;: null,
+curl --location --request POST 'https://apihotfix.papercloudelite.co.uk/api/v2/tags/search' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhbGciO…'
+--data-raw '{
+    "ClientId": null,
+    "Tag": "TAG1",
+    "From": null,
+    "To": null,
+    "BoxTitle": null
+}'
 
-    &quot;Tag&quot;: &quot;TAG1&quot;,
-
-    &quot;From&quot;: null,
-
-    &quot;To&quot;: null,
-
-    &quot;BoxTitle&quot;: null
-
-}&#39;
 ```
 Tag searches can also be done within a client file, the endpoint for this is as below:
 NKBIMAGE
@@ -1140,44 +866,30 @@ Responses:
 
 > - 200 – a successful request will return a set of JSON WHAT ARE ELEMENT?
 
-```
-**[**
+```json
 
-**{**
+[
+  {
+    "elementId": 0, --This is an internal field and can be ignored
+    "elementType": 0, --This is an internal field and can be ignored
+    "elementDate": "2022-05-31T15:47:14.953Z", --This is an internal field and can be ignored
 
-**&quot;elementId&quot;:**  **0**** , --This is an internal field and can be ignored**
+    "clientId": 0,
+    "clientFileName": "string",
+    "tabId": 0,
+    "tabTitle": "string",
+    "rowId": 0,
+    "rowTitle": "string",
+    "boxId": 0,
+    "boxTitle": "string",
+    "paperId": 0,
+    "paperTitle": "string",
+    "pageCount": 0,
+    "tagCount": 0
+  }
+]
 
-**&quot;elementType&quot;:**  **0**** , --This is an internal field and can be ignored**
 
-**&quot;elementDate&quot;:**  **&quot;2022-05-31T15:47:14.953Z&quot;**** , --This is an internal field and can be ignored**
-
-**&quot;clientId&quot;:**  **0**** ,**
-
-**&quot;clientFileName&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;tabId&quot;:**  **0**** ,**
-
-**&quot;tabTitle&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;rowId&quot;:**  **0**** ,**
-
-**&quot;rowTitle&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;boxId&quot;:**  **0**** ,**
-
-**&quot;boxTitle&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;paperId&quot;:**  **0**** ,**
-
-**&quot;paperTitle&quot;:**  **&quot;string&quot;**** ,**
-
-**&quot;pageCount&quot;:**  **0**** ,**
-
-**&quot;tagCount&quot;:**  **0**
-
-**}**
-
-**]**
 ```
 Example of multiple return items:
 
@@ -1198,36 +910,28 @@ NKB
 ![](RackMultipart20220608-1-mjrzu0_html_e0a47e0fcc0ddd24.png)
 
 ### Body:
-```
-**{**
+```json
 
-**&quot;appendToFront&quot;**** : **** true****, --REQUIRED (set the location to either the front\rear of the box)**
+{
+  "appendToFront": true, --REQUIRED (set the location to either the front\rear of the box)
+  "paperBase64String": "string", --REQUIRED (this is the paper item to be stored)
+  "thumbnailBase64String": "string", --OPTIONAL (ability to send a thumbnail with the item)
+  "filename": "string", --OPTIONAL (filename to be set on the item)
+  "filedate": "2022-05-12", --OPTIONAL (todays date is used if not supplied)
+  "paperType": "INT", --REQUIRED (see PaperType lookup below)
+  "uploadItinerary": { "boxID": “INT” }, --REQUIRED (defines the box that the paper should be placed)
 
-**&quot;paperBase64String&quot;**** : ****&quot;string&quot;****, --REQUIRED (this is the paper item to be stored)**
 
-**&quot;thumbnailBase64String&quot;**** : ****&quot;string&quot;****, --OPTIONAL (ability to send a thumbnail with the item)**
-
-**&quot;filename&quot;**** : ****&quot;string&quot;****, --OPTIONAL (filename to be set on the item)**
-
-**&quot;filedate&quot;**** : ****&quot;2022-05-12&quot;****, --OPTIONAL (todays date is used if not supplied)**
-
-**&quot;paperType&quot;**** : ****&quot;INT&quot;****, --REQUIRED (see PaperType lookup below)**
-
-**&quot;uploadItinerary&quot;**** : { ****&quot;boxID&quot;: &quot;INT&quot; **** }, --REQUIRED (defines the box that the paper should be placed)**
-
-    &quot;uploadItinerary&quot;: {
-
-        &quot;boxId&quot;: 2351
-
+    "uploadItinerary": {
+        "boxId": 2351
     },
 
-**&quot;tags&quot;**** : [ --OPTIONAL (define any tags to be added to the item in a comma separated list)**
+  "tags": [ --OPTIONAL (define any tags to be added to the item in a comma separated list)
+    "string"
+  ]
+}
 
-**&quot;string&quot;**
 
-**]**
-
-**}**
 ```
 ### PaperType lookup by extension:
 
