@@ -190,10 +190,10 @@ Required Parameters:
 
 Curl Example:
 
-```
-curl --location --request GET &#39;https://apihotfix.papercloudelite.co.uk/api/v2/client/ref/JON123?shallow=true&#39; 
---header &#39;Accept: application/json&#39; \
---header &#39;Authorization: Bearer eyJhbGci…
+```bash
+curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/client/ref/JON123?shallow=true' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJhbGci…
 ```
 
 
