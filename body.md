@@ -22,8 +22,33 @@ Sandbox:
 
 >Token URL: [https://idpsandbox01.papercloudelite.co.uk/connect/token](https://idpsandbox01.papercloudelite.co.uk/connect/token)
 
+## Acceptend Authentication code flows
 
-## Flows
+Papercloud allows the following flows:
+Authorisation Code Flow
+The Authorization Code grant type is used by web and mobile apps. It differs from most of the other grant types by first requiring the app launch a browser to begin the flow. At a high level, the flow has the following steps:
+
+- The application opens a browser to send the user to the OAuth server
+- The user sees the authorization prompt and approves the app’s request
+- The user is redirected back to the application with an authorization code in the query string
+- The application exchanges the authorization code for an access token
+
+Client Credentials Flow (Tenant)
+
+- Allows you to access web-hosted resources by using the identity of an application. Commonly used for server-to-server interactions that must run in the background, without immediate interaction with a user.
+- Watermark do impose limits on opening this access. Any use cases requiring this access will be assessed and functionality will be made available where deemed fit.
+
+## Sandbox Access
+Sandbox access can be requested through our support team. This will allow new 3rd parties to gain access to a demo system to trial the API and test the relevant end points.
+
+##Versionning
+
+The current version of the API is V02
+
+V1 is still active, however it will be phased out at the end of 2022.
+
+
+## Flows examples
 
 A set of flows have been created to detail the core exposed functionality of the Papercloud API. This suite of calls is accessible from &quot;URL ONCE HOSTED&quot;
 
