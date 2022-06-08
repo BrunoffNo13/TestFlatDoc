@@ -79,20 +79,15 @@ Used for both Tabs and Boxes.
 
 Colour fields accept either the numerical value or the text value.
 
-
 ``` html
 <body class='Colours'
       <p>"<span style="color: #808080;">Grey</span>" = 0</p>
       >
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
-- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `#c5f015`
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `#1589F0`
-
 ```
 
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
-- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `#c5f015`
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `#1589F0`
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `Red = 7`
+- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `Green = 4`
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue = 1`
 
 
     <p>"<span style="color: #808080;">Grey</span>" = 0</p>
