@@ -6,9 +6,12 @@ Live:
 
 ``` html
 <img src="[url](https://myoctocat.com/assets/images/base-octocat.svg)" alt="alternatetext"> 
+https://myoctocat.com/assets/images/base-octocat.svg)
 ```
 
 [Photo](https://myoctocat.com/assets/images/base-octocat.svg)
+
+https://myoctocat.com/assets/images/base-octocat.svg)
 
  
 
