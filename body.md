@@ -206,13 +206,11 @@ These endpoints allow creation of client files within the Papercloud system. Str
 
 All calls use the same endpoint:
 
-NKBJPEG HERE
+![clientCreate](https://content.watermarktech.co.uk/download/flatdoc/clientCreate.JPG "clientCreate")
 
 The contents are dynamic, some basic examples have been supplied in the calls laid out within below sections.
 
 An explanation of all fields is found here, this version is for client type &quot;Person&quot;:
-
-NKB IMAGE???
 
 ```json
 {
@@ -690,7 +688,8 @@ This functionality requires vx.x.x.x or later of Connect to be installed on the 
 
 The endpoint to initiate a jump is as follows:
 
- ![](RackMultipart20220608-1-mjrzu0_html_df1eff0f6933cd60.png)
+![jump](https://content.watermarktech.co.uk/download/flatdoc/jump.JPG "jump")
+
 
 The Body of this call should contain the following:
 
@@ -748,9 +747,9 @@ This endpoint is demoed via &quot;Flow5C&quot; and &quot;Flow5D&quot; of the Api
 
 There are two version of the call, one returns the physical paper item that a user can download to view, e.g., a .docx document that the user could then &quot;Download&quot; in the browser for access. The other allows the return of the paper in Base64 format, this would be useful if the requestion application wanted to display\alter the document within their front-end application.
 
-### File version of download:
-NKB
-![](RackMultipart20220608-1-mjrzu0_html_cddde0afe3e50468.png)
+### File version of Paper download:
+
+![downFile](https://content.watermarktech.co.uk/download/flatdoc/downFile.JPG "downFile")
 
 Required params:
 
@@ -765,8 +764,8 @@ curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/pa
 
 ```
 ### Base64:
-NKB IMAGE
-![](RackMultipart20220608-1-mjrzu0_html_f2e5c53b579842a4.png)
+
+![downBase](https://content.watermarktech.co.uk/download/flatdoc/downBase.JPG "downBase")
 
 Required Parameter:
 
@@ -786,8 +785,8 @@ curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/pa
 This endpoint returns the entire structure of a client file.
 
 This endpoint is demoed via &quot;Flow4A&quot; of the ApiV2FlowGuide.
-NKB IMAGE
-![](RackMultipart20220608-1-mjrzu0_html_ff7f2d4e441f15f9.png)
+
+![clientRef](https://content.watermarktech.co.uk/download/flatdoc/clientRef.JPG "clientRef")
 
 Required Parameters:
 
@@ -805,10 +804,10 @@ curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/cl
 ## Return all paper items within a box
 
 This endpoint returns the contents of a document box.
-NKB IMAGE
+
 This endpoint is demoed via &quot;Flow5A&quot; of the ApiV2FlowGuide.
 
-![](RackMultipart20220608-1-mjrzu0_html_46fd3fd3650f53f7.png)
+![paperBox](https://content.watermarktech.co.uk/download/flatdoc/paperBox.JPG "paperBox")
 
 Required Parameters:
 
@@ -827,8 +826,8 @@ curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/pa
 ## Download an entire box contents
 
 This endpoint is demoed via &quot;Flow5B&quot; of the ApiV2FlowGuide.
-NKB IMAGE
-![](RackMultipart20220608-1-mjrzu0_html_2735e8ea484d4a55.png)
+
+![boxDown](https://content.watermarktech.co.uk/download/flatdoc/boxDown.JPG "boxDown")
 
 Curl Example:
 ```bash
@@ -842,8 +841,8 @@ curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/bo
 ## Retrieve items via tag search
 
 This endpoint is demoed via &quot;Flow4B&quot; of the ApiV2FlowGuide.
-NKB IMAGE
-![](RackMultipart20220608-1-mjrzu0_html_981706a552abea7f.png)
+
+![tagSearch](https://content.watermarktech.co.uk/download/flatdoc/tagSearch.JPG "tagSearch")
 
 NKB - need example call and response
 
@@ -910,8 +909,11 @@ Example of multiple return items:
 NKB SHOW EXAMPLES
 
 ## Upload Paper items
-NKB TO DO
-![](RackMultipart20220608-1-mjrzu0_html_a4476649dbd51e50.png)
+Paper can be uploaded either as a file or as a base64 string. 
+
+### Upload Paper as a file
+
+![uploadPaper](https://content.watermarktech.co.uk/download/flatdoc/uploadPaper.JPG "uploadPaper")
 
 Parameters:
 NKB CHECK UPLOADITIN
@@ -922,10 +924,13 @@ NKB CHECK UPLOADITIN
 NKB
 In terms of the UploadItinerary there are multiple ways to send items
 
-NKB
-![](RackMultipart20220608-1-mjrzu0_html_e0a47e0fcc0ddd24.png)
 
-### Body:
+### Upload Paper as Base64 string
+
+![uploadBase](https://content.watermarktech.co.uk/download/flatdoc/uploadBase.JPG "uploadBase")
+
+Body for upload:
+
 ```json
 
 {
@@ -947,8 +952,9 @@ NKB
   ]
 }
 
-
 ```
+
+
 ### PaperType lookup by extension:
 
 >- &quot;.tif&quot; or &quot;.tiff&quot; : 0
@@ -992,13 +998,20 @@ NKB
 
 This is optional for all items paperwork however this is specifically useful for Office items as server-side thumbnail generation is near impossible due to Office being a client-side application. Any Office documents will be added to the system without thumbnails if this is not supplied. (Note: thumbnails will be applied once the version is updated within PCE via Watermark Connect.)
 
-NKB COME BACK TO
+![thumbnail](https://content.watermarktech.co.uk/download/flatdoc/thumbnail.JPG "thumbnail")
+
+NKB COME BACK TO need itinerary etc
+
+Parameters:
+ - **id**  - paperId for where the thumbnail should be applied
+ - **Files** – Required – the File to be sent
+
 
 ## Paper Deletes
 
 When removing paperwork this is classed as a soft delete. As with Papercloud front end the paperwork will be placed within the relative users recycle bin.
-NKB
-![](RackMultipart20220608-1-mjrzu0_html_9b0a745efbb9d043.png)
+
+![deletePaper](https://content.watermarktech.co.uk/download/flatdoc/deletePaper.JPG "deletePaper")
 
 Required Parameters:
 
@@ -1009,8 +1022,8 @@ Success returns status - 204 - as the item is deleted there is no return data as
 ## Box Deletes
 
 When removing boxes this is classed as a soft delete. As with Papercloud front end the box and containing paperwork will be placed within the relative users recycle bin.
-NKB
-![](RackMultipart20220608-1-mjrzu0_html_d6c6bd440f47392d.png)
+
+![deleteBoxes](https://content.watermarktech.co.uk/download/flatdoc/deleteBoxes.JPG "deleteBoxes")
 
 Required Parameters:
 
@@ -1020,6 +1033,7 @@ Success returns status - 204 - as the item is deleted there is no return data as
 
 
 # Quick Guides
+Coming soon
 ## Setting up an app in Papercloud
 ## Exporting and importing Swagger (Postman)
 ## Make REST API calls
