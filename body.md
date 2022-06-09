@@ -108,7 +108,7 @@ Used for both Tabs and Boxes.
 Colour fields accept either the numerical value or the text value.
 
 >-  **Grey = 0**
->-  **`Blue = 1**
+>-  **Blue = 1**
 >-  **Brown = 2**
 >- **Orange = 3**
 >-  **Green = 4**
