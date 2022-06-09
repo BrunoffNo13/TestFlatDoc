@@ -283,9 +283,8 @@ Create a file of the type &quot;Other&quot;
   }
   
 ```
-To apply structure within this endpoint create the following section can be included within the body, this is fully optional – for a clearer example see XXXXX:
+To apply structure within this endpoint create the following section can be included within the body, this is fully optional.
 
-ALSO NEED ROW ORDER asc to desc or other way?
 ```json
 
 "tabs": [
