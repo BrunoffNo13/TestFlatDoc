@@ -182,8 +182,8 @@ This is a list of items that can be provided within the calls - the items are op
 This endpoint confirms if a client already exists. This endpoint has an optional shallow call
 
 This endpoint is demoed via &quot;Flow1A&quot; of the ApiV2FlowGuide.
-NKB
-![](RackMultipart20220608-1-mjrzu0_html_ec891a2f1493e428.png)
+
+![clientRef](https://content.watermarktech.co.uk/download/flatdoc/clientRef.jpg "clientRef")
 
 Required Parameters:
 
