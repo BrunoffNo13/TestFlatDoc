@@ -475,8 +475,7 @@ This endpoint is demoed via &quot;Flow1D&quot; of the ApiV2FlowGuide.
 
 Within this example the client will be created with the following structure:
 
-NKB IMAGE
-![](RackMultipart20220608-1-mjrzu0_html_72299ecdddd867f9.png)
+> ![John Smith TRB](https://content.watermarktech.co.uk/download/flatdoc/JohnSmithTRB.jpg "johnsmithtrb")
 
 This is the body used to produce the client file:
 ```json
