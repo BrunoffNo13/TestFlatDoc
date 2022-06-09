@@ -1,5 +1,5 @@
 # Introduction
-Welcome to the Papercloud API, this document should provide guidance for some of the common calls made to the API. This is not an extensive list and Swagger should be used in congunction with this guide. 
+Welcome to the Papercloud API, this document should provide guidance for some of the common calls made to the API. This is not an extensive list and Swagger should be used in conjunction with this guide. 
 
 ## Authentication URls
 
@@ -47,7 +47,7 @@ Swagger shows all of the exposed endpoints as well as param lengths, and return 
 ## Sandbox Access
 Sandbox access can be requested through our support team. This will allow new 3rd parties to gain access to a demo system to trial the API and test the relevant end points.
 
-##Versionning
+## Versioning
 
 The current version of the API is V02
 
@@ -690,8 +690,6 @@ A Jump is simply a means to send some defining data to the API that essentially 
 
 This endpoint is demoed via &quot;Flow6A&quot; of the ApiV2FlowGuide.
 
-NKB
-
 This functionality requires vx.x.x.x or later of Connect to be installed on the client machine.
 
 The endpoint to initiate a jump is as follows:
@@ -836,6 +834,11 @@ curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/pa
 This endpoint is demoed via &quot;Flow5B&quot; of the ApiV2FlowGuide.
 
 ![boxDown](https://content.watermarktech.co.uk/download/flatdoc/boxDown.JPG "boxDown")
+
+Required Parameters:
+
+ - **id** (boxId)
+ - **printable** = false (defines if an end user should be able to print out any PDFs that come with the download)
 
 Curl Example:
 ```bash
