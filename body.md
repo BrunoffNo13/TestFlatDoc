@@ -118,13 +118,11 @@ Colour fields accept either the numerical value or the text value.
 
 ## Return codes
 
-To be done
+200 – indicates success – this will also return in some instances a confirmation of the data stored with some of the post endpoint e.g., if you post a client file the response will include the &quot;ClientFileID&quot; created for the file.
 
->  200 – indicates success – this will also return in some instances a confirmation of the data stored with some of the post endpoint e.g., if you post a client file the response will include the &quot;ClientFileID&quot; created for the file.
+204 – Specifically for deletes, a return with this code indicates success
 
->  204 – Specifically for deletes, a return with this code indicates success
-
->  403 – generally this is a response type indicating something exists but the user does not have access to view\update it. E.g. trying to find a client that resides within a cabinet for which the user does not have access.
+403 – generally this is a response type indicating something exists but the user does not have access to view\update it. E.g. trying to find a client that resides within a cabinet for which the user does not have access.
 
 ## Param lengths
 
