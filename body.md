@@ -183,7 +183,7 @@ This endpoint confirms if a client already exists. This endpoint has an optional
 
 This endpoint is demoed via &quot;Flow1A&quot; of the ApiV2FlowGuide.
 
-![clientRef](https://content.watermarktech.co.uk/download/flatdoc/clientRef.jpg "clientRef")
+![clientRef](https://content.watermarktech.co.uk/download/flatdoc/clientRef.JPG "clientRef")
 
 Required Parameters:
 
