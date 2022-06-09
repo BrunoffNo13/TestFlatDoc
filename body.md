@@ -130,7 +130,7 @@ These are listed on the swagger documentation.
 
 ## Date format
 
-Dates should be provided in &quot;DD/MM/YYYY&quot; format e.g., &quot;23/02/2001&quot;. There is not time requirement on the API.
+Dates should be provided in &quot;DD/MM/YYYY&quot; format e.g., &quot;23/02/2001&quot;. There is no time requirement on the API.
 
 ## Paper Types
 
@@ -177,7 +177,7 @@ PaperType lookup by extension:
 
 ## Check if a client exists by external reference
 
-This endpoint confirms if a client already exists. This endpoint has an option shallow call
+This endpoint confirms if a client already exists. This endpoint has an optional shallow call
 
 This endpoint is demoed via &quot;Flow1A&quot; of the ApiV2FlowGuide.
 
@@ -185,8 +185,8 @@ This endpoint is demoed via &quot;Flow1A&quot; of the ApiV2FlowGuide.
 
 Required Parameters:
 
->- Reference – this is external unique reference for the client. Typically, the 3rd party&#39;s identification ID.
->- Shallow flag, when shallow is set to True this will return only contact data for the client file. When set to False – this will return client contact data as well as the structure within the client file (Tabs, Rows and boxes)
+- Reference – this is external unique reference for the client. Typically, the 3rd party&#39;s identification ID.
+- Shallow - when shallow is set to True this will return only contact data for the client file. When set to False – this will return client contact data as well as the structure within the client file (Tabs, Rows and boxes)
 
 Curl Example:
 
