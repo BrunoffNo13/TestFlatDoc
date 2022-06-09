@@ -900,7 +900,7 @@ Responses:
 
  - 200 – a successful request will return a set of JSON, which can contain multiple items (paper or box items) and their tags e.g.
 
-NKB
+<!--- NKB --->
 
 ```json
 
@@ -938,8 +938,10 @@ Paper can be uploaded either as a file or as a base64 string.
 
 ![uploadPaper](https://content.watermarktech.co.uk/download/flatdoc/uploadPaper.JPG "uploadPaper")
 
+<!--- NKB CHECK UPLOADITIN -->
+
 Parameters:
-NKB CHECK UPLOADITIN
+
  - **Files** – Required – the File to be sent
  - **UploadItinerary**:
   -- { &quot;ClientId&quot;:, &quot;TabId&quot;:, &quot;RowId&quot;:, &quot;BoxId&quot;:, &quot;FileInformation&quot;: [{ &quot;FileName&quot;: &quot;&quot;, &quot;CreatedDate&quot;: &quot;&quot;}] }
