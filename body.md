@@ -867,7 +867,7 @@ This endpoint is demoed via &quot;Flow4B&quot; of the ApiV2FlowGuide.
 
 ![tagSearch](https://content.watermarktech.co.uk/download/flatdoc/tagSearch.JPG "tagSearch")
 
-NKB - need example call and response
+<!--- NKB - need example call and response --->
 
 Body:
 ```json
@@ -944,8 +944,7 @@ NKB CHECK UPLOADITIN
  - **UploadItinerary**:
   -- { &quot;ClientId&quot;:, &quot;TabId&quot;:, &quot;RowId&quot;:, &quot;BoxId&quot;:, &quot;FileInformation&quot;: [{ &quot;FileName&quot;: &quot;&quot;, &quot;CreatedDate&quot;: &quot;&quot;}] }
 
-NKB
-In terms of the UploadItinerary there are multiple ways to send items
+<!--- NKB In terms of the UploadItinerary there are multiple ways to send items --->
 
 
 ### Upload Paper as Base64 string
@@ -1023,7 +1022,7 @@ This is optional for all items paperwork however this is specifically useful for
 
 ![thumbnail](https://content.watermarktech.co.uk/download/flatdoc/thumbnail.JPG "thumbnail")
 
-NKB COME BACK TO need itinerary etc
+<!--- NKB COME BACK TO need itinerary etc --->
 
 Parameters:
  - **id**  - paperId for where the thumbnail should be applied
@@ -1060,4 +1059,4 @@ Coming soon
 ## Setting up an app in Papercloud
 ## Exporting and importing Swagger (Postman)
 ## Make REST API calls
-NKB
+<!--- NKB --->
