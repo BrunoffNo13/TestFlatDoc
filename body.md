@@ -200,9 +200,9 @@ curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/cl
 
 
 
-## Create a client with options to create structure or apply a template structure
+## Create a client with options to apply structure
 
-These endpoints allow creation of client files within the Papercloud system. Structure can also be applied as part of the creation, which has been shown in the examples
+These endpoints allow creation of client files within the Papercloud system. Structure can also be applied as part of the creation, which has been shown in the examples. This structure can be a bespoke structure or from existing system templates. 
 
 All calls use the same endpoint:
 
@@ -210,7 +210,7 @@ NKBJPEG HERE
 
 The contents are dynamic, some basic examples have been supplied in the calls laid out within below sections.
 
-A explanation of all fields is found here, this version is for client type &quot;Person&quot;:
+An explanation of all fields is found here, this version is for client type &quot;Person&quot;:
 
 NKB IMAGE???
 
@@ -327,7 +327,7 @@ ALSO NEED ROW ORDER asc to desc or other way?
 - See cabinets (Flow1B)
 - See templates (Flow1E)
 
-## Create client file no structure:
+## Create client file witout structure
 
 This call will create a client file in Papercloud, but it will not add any Tab, Row or box structure to the file.
 
@@ -410,7 +410,7 @@ curl --location --request POST 'https://apihotfix.papercloudelite.co.uk/api/v2/c
 
 ```
 
-## Create client file apply template:
+## Create a client file & apply a template
 
 This call will create a client file in Papercloud and apply a pre created template from the template repository.
 
@@ -467,11 +467,9 @@ curl --location --request POST 'https://apihotfix.papercloudelite.co.uk/api/v2/c
 
 ```
 
-## Create client file define bespoke structure:
+## Create a client file & define bespoke structure
 
 This call will create a client file in Papercloud and apply bespoke structure e.g., tabs, rows, and boxes.
-
-NKBCOLOUIRS
 
 This endpoint is demoed via &quot;Flow1D&quot; of the ApiV2FlowGuide.
 
