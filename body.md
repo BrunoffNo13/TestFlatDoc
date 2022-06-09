@@ -53,7 +53,7 @@ V1 is still active, however it will be phased out at the end of 2022.
 
 A set of flows have been created to detail the core exposed functionality of the Papercloud API. This suite of calls is accessible from &quot;URL ONCE HOSTED&quot;
 
-> - Flow1 - Creating Clients
+> - **Flow1 - Creating Clients**
 >   - Create Client file with option to apply structure or apply a template
 >     - Flow1A - Client Get Client by Reference Number
 >     - Flow1B – Cabinet Get All	
@@ -64,27 +64,24 @@ A set of flows have been created to detail the core exposed functionality of the
 >   - Client Create Client and apply and existing template
 >     - Flow1E – Template Get List
 >     - Flow 1F - Client Create Client and apply template
-> - Flow 2 - Adding Structure
+> - **Flow 2 - Adding Structure**
 >   - Flow2A - Client Apply Template
 >     - Flow2B – Add a tab to a client file
 >     - Flow2C – Add a Row to a client file
 >     - Flow2D - Add a Box to a client file
-> - Flow3 – Add Paperwork to a box
+> - **Flow3 – Add Paperwork to a box**
 >   - Flow3A Paper V2 Upload Paper 
-> - Flow4 – Searches
+> - **Flow4 – Searches**
 >   - Flow4A - See All Tabs Rows Boxes For specific client file by ExternalReference
 >   - Flow4B - Get a list of all boxes clients that are API accessible that contain the given tag
-> - Flow5 – Viewing, retrieving, and downloading items
+> - **Flow5 – Viewing, retrieving, and downloading items**
 >   - Flow5A - Paper V2 Get Papers For Box
 >   - Flow5B - Box Download Box Contents
 >   - Flow5C - Paper V2 Download Paper
 >   - Flow5D -Paper V2 Download Paper Base64
-> - Flow6 – Jumping to items
+> - **Flow6 – Jumping to items**
 >   - Flow6A - Message Hub Post Jump Itinerary
-
-## Flow document
-
-Note the variables within the flow document point to the sandbox:
+> - **Flow7 - Deletes**
 
 ## Connect config for use with the Sandbox
 
@@ -124,9 +121,9 @@ Colour fields accept either the numerical value or the text value.
 
 403 – generally this is a response type indicating something exists but the user does not have access to view\update it. E.g. trying to find a client that resides within a cabinet for which the user does not have access.
 
-## Param lengths
+## Input Param lengths
 
-These are listed on the swagger documentation.
+These are listed on the Swagger documentation.
 
 ## Date format
 
@@ -172,6 +169,11 @@ PaperType lookup by extension:
 >
 >- &quot;other&quot; : 8
 
+## UploadItinerary
+
+This is a list of items that can be provided within the calls - the items are optional depending on the required action:
+
+{ “ClientId”:, “TabId”:, “RowId”:, “BoxId”:, “FileInformation”: [{ “FileName”: “”, “CreatedDate”: “”}] }
 
 # Example endpoint calls
 
@@ -180,13 +182,13 @@ PaperType lookup by extension:
 This endpoint confirms if a client already exists. This endpoint has an optional shallow call
 
 This endpoint is demoed via &quot;Flow1A&quot; of the ApiV2FlowGuide.
-
+NKB
 ![](RackMultipart20220608-1-mjrzu0_html_ec891a2f1493e428.png)
 
 Required Parameters:
 
-- Reference – this is external unique reference for the client. Typically, the 3rd party&#39;s identification ID.
-- Shallow - when shallow is set to True this will return only contact data for the client file. When set to False – this will return client contact data as well as the structure within the client file (Tabs, Rows and boxes)
+- **reference** – this is external unique reference for the client. Typically, the 3rd party&#39;s identification ID.
+- **shallow** - when shallow is set to True this will return only contact data for the client file. When set to False – this will return client contact data as well as the structure within the client file (Tabs, Rows and boxes)
 
 Curl Example:
 
@@ -684,7 +686,7 @@ curl --location --request POST 'https://apihotfix.papercloudelite.co.uk/api/v2/c
 A Jump is simply a means to send some defining data to the API that essentially drives the front end of Papercloud in context of the authenticated user.
 
 This endpoint is demoed via &quot;Flow6A&quot; of the ApiV2FlowGuide.
-
+NKB
 This functionality requires vx.x.x.x or later of Connect to be installed on the client machine.
 
 The call to initiate a jump is as follows:
@@ -723,6 +725,7 @@ The endpoint also allows the jump to be initiated with the use of the ExternalRe
 }
 
 ```
+
 The elementId relates to the item that needs to be brought to the attention of the end user of Papercloud.
 
 Curl Example:
@@ -752,7 +755,7 @@ There are two version of the call, one returns the physical paper item that a us
 
 Required Parameter:
 
-> - PaperID
+ - **PaperID**
 
 Curl Example:
 ```bash
@@ -768,7 +771,7 @@ NKB IMAGE
 
 Required Parameter:
 
-> - PaperID
+ - **PaperID**
 
 Curl Example:
 ```bash
@@ -788,8 +791,8 @@ NKB IMAGE
 
 Required Parameters:
 
-> - Reference (ExternalReference)
-> - shallow = false
+ - **reference** (ExternalReference)
+ - **shallow** = false
 
 Curl Example:
 ```bash
@@ -809,8 +812,8 @@ This endpoint is demoed via &quot;Flow5A&quot; of the ApiV2FlowGuide.
 
 Required Parameters:
 
-> - id (boxId)
-> - shallow = false
+ - **id** (boxId)
+ - **shallow** = false
 
 Curl Example:
 ```bash
@@ -834,7 +837,6 @@ curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/bo
 --header 'Accept: application/octet-stream'
 --header 'Authorization: Bearer eyJhbGciO…'
 
-
 ```
 
 ## Retrieve items via tag search
@@ -843,6 +845,20 @@ This endpoint is demoed via &quot;Flow4B&quot; of the ApiV2FlowGuide.
 NKB IMAGE
 ![](RackMultipart20220608-1-mjrzu0_html_981706a552abea7f.png)
 
+NKB - need example call and response
+
+Body:
+```json
+{
+  "clientId": 0, 
+  "tag": "string", --REQUIRED, Comma separated list of tags
+  "from": "2022-06-09T07:40:56.450Z", --OPTIONAL – start date of when the tag was applied
+  "to": "2022-06-09T07:40:56.450Z", --OPTIONAL – end date of when the tag was applied
+  "boxTitle": "string" --OPTIONAL –limit the search by box titles
+}
+```
+
+Curl Example:
 ```bash
 
 curl --location --request POST 'https://apihotfix.papercloudelite.co.uk/api/v2/tags/search' \
@@ -857,29 +873,26 @@ curl --location --request POST 'https://apihotfix.papercloudelite.co.uk/api/v2/t
 }'
 
 ```
-Tag searches can also be done within a client file, the endpoint for this is as below:
-NKBIMAGE
-![](RackMultipart20220608-1-mjrzu0_html_9dff37d5094a1899.png)
 
 Responses:
-
-> - 200 – a successful request will return a set of JSON WHAT ARE ELEMENT?
+NKB
+> - 200 – a successful request will return a set of JSON, which can contain multiple items (paper or box items) and their tags e.g.
 
 ```json
 
 [
   {
-    "elementId": 0, --This is an internal field and can be ignored
+    "elementId": 0, --This is the tags unique identifier
     "elementType": 0, --This is an internal field and can be ignored
     "elementDate": "2022-05-31T15:47:14.953Z", --This is an internal field and can be ignored
 
-    "clientId": 0,
-    "clientFileName": "string",
-    "tabId": 0,
-    "tabTitle": "string",
-    "rowId": 0,
-    "rowTitle": "string",
-    "boxId": 0,
+    "clientId": 0, 
+    "clientFileName": "string", 
+    "tabId": 0, 
+    "tabTitle": "string", 
+    "rowId": 0, 
+    "rowTitle": "string", 
+    "boxId": 0, 
     "boxTitle": "string",
     "paperId": 0,
     "paperTitle": "string",
@@ -888,8 +901,8 @@ Responses:
   }
 ]
 
-
 ```
+
 Example of multiple return items:
 
 NKB SHOW EXAMPLES
@@ -899,11 +912,13 @@ NKB TO DO
 ![](RackMultipart20220608-1-mjrzu0_html_a4476649dbd51e50.png)
 
 Parameters:
+NKB CHECK UPLOADITIN
+ - **Files** – Required – the File to be sent
+ - **UploadItinerary**:
+  -- { &quot;ClientId&quot;:, &quot;TabId&quot;:, &quot;RowId&quot;:, &quot;BoxId&quot;:, &quot;FileInformation&quot;: [{ &quot;FileName&quot;: &quot;&quot;, &quot;CreatedDate&quot;: &quot;&quot;}] }
 
-> - Files – Required – the File to be sent
-> - Upload Itinerary:
->  -- { &quot;ClientId&quot;:, &quot;TabId&quot;:, &quot;RowId&quot;:, &quot;BoxId&quot;:, &quot;FileInformation&quot;: [{ &quot;FileName&quot;: &quot;&quot;, &quot;CreatedDate&quot;: &quot;&quot;}] }
-
+NKB
+In terms of the UploadItinerary there are multiple ways to send items
 
 NKB
 ![](RackMultipart20220608-1-mjrzu0_html_e0a47e0fcc0ddd24.png)
@@ -987,9 +1002,7 @@ Required Parameters:
 
 > - Id (PaperID)
 
-Return values:
-
-> - TBC ONCE CHANGES ARE MADE
+Success returns status - 204 - as the item is deleted there is no return data associated with this call.
 
 ## Box Deletes
 
@@ -999,42 +1012,9 @@ NKB
 
 Required Parameters:
 
-> - Id (BoxID)
+ - **Id** (BoxID)
 
-Return values:
-NKB
-> - TBC ONCE CHANGES ARE MADE
-
-## Update existing client file details
-
-## To do:
-
-- Updates for existing items
-- See Templates
-- Is it possible to remove these fields from the response while creating a client file with file type: Other
-
-![](RackMultipart20220608-1-mjrzu0_html_b2ee116575890b1c.png)
-
-- See Cabinets
-- Send Thumbnails for posted papers
-- Deletes
-- Return codes
-- Example of uploading paper
-  - Upload Itinerary
-  - Base64 upload with file types
-  -
-
-Also this documentation can&#39;t be considered as descriptive enough as
-
-- It covers only happy path i.e. status 200 . No details or other status codes and error messages. Dev team must need to handle all -ve conditions and should be aware of these. These also needs to be added in the test cases.
-- There is no definition for request parameters, field limits not defined. Just for e.g. what does shallow mean in Get client by reference?
-
-![](RackMultipart20220608-1-mjrzu0_html_bcee2896674425d.jpg)
-
-- Similarly response parameters have no description – no idea what is element id and  element type (\&quot;elementId\&quot;: 47326852,\n  \&quot;elementType\&quot;: \&quot;None). Although most are intuitive enough by name but not all.
-- Take example of Flow 4 B, in case there more than one documents in a box matching tag, no idea how response will be returned, as a array or each record will be listed in a flat structure.
-
-In general for a publically available apis, documentation should be much more thorough.
+Success returns status - 204 - as the item is deleted there is no return data associated with this call.
 
 
 # Quick Guides
