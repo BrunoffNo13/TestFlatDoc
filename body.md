@@ -107,6 +107,17 @@ Used for both Tabs and Boxes.
 
 Colour fields accept either the numerical value or the text value.
 
+>-  **Grey = 0**
+>-  **`Blue = 1**
+>-  **Brown = 2**
+>- **Orange = 3**
+>-  **Green = 4**
+>- **Pink = 5**
+>- **Purple = 6**
+>- **Red = 7**
+>- **Yellow = 8**
+
+<!---
 >- ![#808080](https://via.placeholder.com/15/f03c15/000000?text=+) `Grey = 0`
 >- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue = 1`
 >- ![#7F6000](https://via.placeholder.com/15/f03c15/000000?text=+) `Brown = 2`
@@ -116,6 +127,7 @@ Colour fields accept either the numerical value or the text value.
 >- ![#800080](https://via.placeholder.com/15/c5f015/000000?text=+) `Purple = 6`
 >- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `Red = 7`
 >- ![#FFFF00](https://via.placeholder.com/15/c5f015/000000?text=+) `Yellow = 8`
+--->
 
 
 ## Return codes
