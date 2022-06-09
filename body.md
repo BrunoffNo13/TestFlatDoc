@@ -705,15 +705,15 @@ The Body of this call should contain the following:
 ```
 The element types accepted for this call are as follows:
 
-```
-- ClientFile **=** 3
 
-- Tab **=** 4
+- ClientFile = 3
 
-- Box **=** 6
+- Tab = 4
 
-- Paper **=** 7
-```
+- Box = 6
+
+- Paper = 7
+
 
 The endpoint also allows the jump to be initiated with the use of the ExternalReference, this is done with the following structure:
 ```json
