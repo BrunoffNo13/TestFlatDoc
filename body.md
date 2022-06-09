@@ -927,9 +927,8 @@ Responses:
 
 ```
 
-Example of multiple return items:
-
-NKB SHOW EXAMPLES
+<!--- Example of multiple return items: --->
+<!--- NKB SHOW EXAMPLES --->
 
 ## Upload Paper items
 Paper can be uploaded either as a file or as a base64 string. 
