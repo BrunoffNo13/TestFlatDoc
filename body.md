@@ -94,7 +94,7 @@ With WatermarkConnect closed the below file should be placed in the following lo
 
 C:\Program Files\WatermarkTech\WatermarkConnect
 
-NKB NEED FILE
+TBC LINK TO FILE
 
 
 # Generic attributes
@@ -179,6 +179,10 @@ PaperType lookup by extension:
 This is a list of items that can be provided within the calls - the items are optional depending on the required action:
 
 { “ClientId”:, “TabId”:, “RowId”:, “BoxId”:, “FileInformation”: [{ “FileName”: “”, “CreatedDate”: “”}] }
+
+If an upload itinerary is supplied it will use the data to determine the intended location, if a value is provided it will store the paper in that location.ie if a client id is supplied and nothing else a new tab row and box will be created and the paper will be stored in this new locationif a tab id is supplied that tab will be used and so on. 
+
+
 
 # Example endpoint calls
 
