@@ -686,10 +686,12 @@ curl --location --request POST 'https://apihotfix.papercloudelite.co.uk/api/v2/c
 A Jump is simply a means to send some defining data to the API that essentially drives the front end of Papercloud in context of the authenticated user.
 
 This endpoint is demoed via &quot;Flow6A&quot; of the ApiV2FlowGuide.
+
 NKB
+
 This functionality requires vx.x.x.x or later of Connect to be installed on the client machine.
 
-The call to initiate a jump is as follows:
+The endpoint to initiate a jump is as follows:
 
  ![](RackMultipart20220608-1-mjrzu0_html_df1eff0f6933cd60.png)
 
@@ -706,13 +708,13 @@ The Body of this call should contain the following:
 The element types accepted for this call are as follows:
 
 
-- ClientFile = 3
+- **ClientFile = 3**
 
-- Tab = 4
+- **Tab = 4**
 
-- Box = 6
+- **Box = 6**
 
-- Paper = 7
+- **Paper = 7**
 
 
 The endpoint also allows the jump to be initiated with the use of the ExternalReference, this is done with the following structure:
@@ -749,11 +751,11 @@ This endpoint is demoed via &quot;Flow5C&quot; and &quot;Flow5D&quot; of the Api
 
 There are two version of the call, one returns the physical paper item that a user can download to view, e.g., a .docx document that the user could then &quot;Download&quot; in the browser for access. The other allows the return of the paper in Base64 format, this would be useful if the requestion application wanted to display\alter the document within their front-end application.
 
-### File version:
-
+### File version of download:
+NKB
 ![](RackMultipart20220608-1-mjrzu0_html_cddde0afe3e50468.png)
 
-Required Parameter:
+Required params:
 
  - **PaperID**
 
@@ -781,6 +783,7 @@ curl --location --request GET 'https://apihotfix.papercloudelite.co.uk/api/v2/pa
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIs'
 
 ```
+
 ## Get client files with all Tabs, Rows and Boxes
 
 This endpoint returns the entire structure of a client file.
@@ -875,8 +878,10 @@ curl --location --request POST 'https://apihotfix.papercloudelite.co.uk/api/v2/t
 ```
 
 Responses:
+
+ - 200 – a successful request will return a set of JSON, which can contain multiple items (paper or box items) and their tags e.g.
+
 NKB
-> - 200 – a successful request will return a set of JSON, which can contain multiple items (paper or box items) and their tags e.g.
 
 ```json
 
@@ -1000,7 +1005,7 @@ NKB
 
 Required Parameters:
 
-> - Id (PaperID)
+ - **Id** (PaperID)
 
 Success returns status - 204 - as the item is deleted there is no return data associated with this call.
 
