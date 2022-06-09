@@ -1,4 +1,6 @@
 # Introduction
+Welcome to the Papercloud API, this document should provide guidance for some of the common calls made to the API. This is not an extensive list and Swagger should be used in congunction with this guide. 
+
 ## Authentication URls
 
 IDP and Base API URLS
@@ -38,6 +40,9 @@ Client Credentials Flow (Tenant)
 
 - Allows you to access web-hosted resources by using the identity of an application. Commonly used for server-to-server interactions that must run in the background, without immediate interaction with a user.
 - Watermark do impose limits on opening this access. Any use cases requiring this access will be assessed and functionality will be made available where deemed fit.
+
+## Swagger 
+Swagger shows all of the exposed endpoints as well as param lengths, and return codes where relevant. Swagger is however not definative and some self learning\exploration is encouraged as it is not possible to detail the entire result sets for all of the calls. 
 
 ## Sandbox Access
 Sandbox access can be requested through our support team. This will allow new 3rd parties to gain access to a demo system to trial the API and test the relevant end points.
