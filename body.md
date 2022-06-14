@@ -58,6 +58,8 @@ V1 is still active, however it will be phased out at the end of 2022.
 
 A set of flows have been created to detail the core exposed functionality of the Papercloud API. This suite of calls is accessible from &quot;URL ONCE HOSTED&quot;
 
+Any parameters are examples to demonstrate structure - they will need replacing with correlating values.  
+
 > - **Flow1 - Creating Clients**
 >   - Create Client file with option to apply structure or apply a template
 >     - Flow1A - Client Get Client by Reference Number
