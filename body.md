@@ -196,6 +196,16 @@ This is a list of items that can be provided within the calls - the items are op
 
 If an upload itinerary is supplied it will use the data to determine the intended location, if a value is provided it will store the paper in that location.ie if a client id is supplied and nothing else a new tab row and box will be created and the paper will be stored in this new locationif a tab id is supplied that tab will be used and so on. 
 
+Examples:
+
+Store in specific box:
+
+  { "BoxId": 2336, "FileInformation": [{ "FileName": "name for the file.ext", "CreatedDate": "05/07/1998 14:53:24"  }] }
+  
+Store on a specific row:
+  
+ { "ClientId": 1063, "TabId": 1094, "RowId": 1103, "FileInformation": [{ "FileName": "name for the file.ext", "CreatedDate": "05/07/1998 14:53:24"  }] }
+
 
 
 # Example endpoint calls
@@ -937,15 +947,20 @@ Paper can be uploaded either as a file or as a base64 string.
 
 ### Upload Paper as a file
 
+This endpoint is demoed via &quot;Flow3A&quot; of the ApiV2FlowGuide.
+
 ![uploadPaper](https://content.watermarktech.co.uk/download/flatdoc/uploadPaper.JPG "uploadPaper")
 
 <!--- NKB CHECK UPLOADITIN -->
 
 Parameters:
 
+ - **Id** - ClientFileID for where the paper needs to go. Not supplying this ID makes an item on the users in-tray
  - **Files** – Required – the File to be sent
  - **UploadItinerary**:
-  -- { &quot;ClientId&quot;:, &quot;TabId&quot;:, &quot;RowId&quot;:, &quot;BoxId&quot;:, &quot;FileInformation&quot;: [{ &quot;FileName&quot;: &quot;&quot;, &quot;CreatedDate&quot;: &quot;&quot;}] }
+  -- { &quot;TabId&quot;:, &quot;RowId&quot;:, &quot;BoxId&quot;:, &quot;FileInformation&quot;: [{ &quot;FileName&quot;: &quot;&quot;, &quot;CreatedDate&quot;: &quot;&quot;}] }
+
+The UploadItinerary can be altered to either post the item into an existing box (as above) or to create a new box within the specified row by simply removing the BoxID entry. Examples of these structures are included within the postman flow examples. 
 
 <!--- NKB In terms of the UploadItinerary there are multiple ways to send items --->
 
@@ -953,6 +968,8 @@ Parameters:
 ### Upload Paper as Base64 string
 
 ![uploadBase](https://content.watermarktech.co.uk/download/flatdoc/uploadBase.JPG "uploadBase")
+
+This endpoint is demoed via &quot;Flow3B&quot; of the ApiV2FlowGuide.
 
 Body for upload:
 
