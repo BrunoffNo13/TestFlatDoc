@@ -89,6 +89,11 @@ Any parameters are examples to demonstrate structure - they will need replacing 
 > - **Flow6 – Jumping to items**
 >   - Flow6A - Message Hub Post Jump Itinerary
 > - **Flow7 - Deletes**
+>   - Flow7A - Delete Paper item
+>   - Flow7B - Delete Box
+>   - Flow7C - Delete Client
+>   - Flow7D - Row Delete Row
+>   - Flow7E - Tab Delete Tab
 
 ## Connect config for use with the Sandbox
 
