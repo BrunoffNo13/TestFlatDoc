@@ -142,7 +142,7 @@ Colour fields accept either the numerical value or the text value.
 
 ## Input Param lengths
 
-These are listed on the Swagger documentation.
+These are listed on the Swagger documentation within the schema section for any relevant POSTS.
 
 ## Date format
 
