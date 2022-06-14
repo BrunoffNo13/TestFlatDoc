@@ -960,7 +960,12 @@ Parameters:
  - **UploadItinerary**:
   -- { &quot;TabId&quot;:, &quot;RowId&quot;:, &quot;BoxId&quot;:, &quot;FileInformation&quot;: [{ &quot;FileName&quot;: &quot;&quot;, &quot;CreatedDate&quot;: &quot;&quot;}] }
 
-The UploadItinerary can be altered to either post the item into an existing box (as above) or to create a new box within the specified row by simply removing the BoxID entry. Examples of these structures are included within the postman flow examples. 
+The UploadItinerary can be altered to either post the item into an existing box (as above) or to create a new box within the specified row by simply removing the BoxID entry and defining a title for the box as below example shows:
+
+- {"tabId": 1097, "rowId": 1108, "newBoxTitle": "Box Title String", "fileInformation": [{ "fileName": "test12324", "createdDate": "2021-08-25" }] }
+
+
+Examples of these structures are included within the postman flow examples. 
 
 <!--- NKB In terms of the UploadItinerary there are multiple ways to send items --->
 
