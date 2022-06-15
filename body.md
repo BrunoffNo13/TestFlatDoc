@@ -1054,9 +1054,9 @@ This is optional for all items paperwork however this is specifically useful for
 
 ![thumbnail](https://content.watermarktech.co.uk/download/flatdoc/thumbnail.JPG "thumbnail")
 
-<!--- NKB COME BACK TO need itinerary etc --->
 
 Parameters:
+ 
  - **id**  - paperId for where the thumbnail should be applied
  - **Files** – Required – the File to be sent
 
