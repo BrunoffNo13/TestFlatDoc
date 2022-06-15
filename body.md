@@ -56,7 +56,9 @@ V1 is still active, however it will be phased out at the end of 2022.
 
 ## Flows examples
 
-A set of flows have been created to detail the core exposed functionality of the Papercloud API. This suite of calls is accessible from &quot;URL ONCE HOSTED&quot;
+A set of flows have been created to detail the core exposed functionality of the Papercloud API. This suite of calls can be downloaded via below:
+
+https://content.watermarktech.co.uk/download/sandbox/ApiV2FlowGuide.json 
 
 Any parameters are examples to demonstrate structure - they will need replacing with correlating values.  
 
