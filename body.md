@@ -79,7 +79,9 @@ Any parameters are examples to demonstrate structure - they will need replacing 
 >     - Flow2C – Add a Row to a client file
 >     - Flow2D - Add a Box to a client file
 > - **Flow3 – Add Paperwork to a box**
->   - Flow3A Paper V2 Upload Paper 
+>   - Flow3A Paper v2 Upload Paper 
+>   - Flow3B Paper v2 Upload Paper Base64
+>   - Flow3C - Paper Apply Thumbnail
 > - **Flow4 – Searches**
 >   - Flow4A - See All Tabs Rows Boxes For specific client file by ExternalReference
 >   - Flow4B - Get a list of all boxes clients that are API accessible that contain the given tag
