@@ -101,7 +101,7 @@ With WatermarkConnect closed the below file should be placed in the following lo
 
 C:\Program Files\WatermarkTech\WatermarkConnect
 
-TBC LINK TO FILE
+https://content.watermarktech.co.uk/download/sandbox/Watermark.Connect.exe.config
 
 
 # Generic attributes
