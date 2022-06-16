@@ -1141,10 +1141,20 @@ Required Parameters:
 
 Success returns status - 204 - as the item is deleted there is no return data associated with this call.
 
+Authentication must first be configured within Papercloud, this is on a per site basis, before any connection can be made
+
+To do this login to Papercloud as an Administrator and access the Client Auth Settings screen
+
+
+> ![img1](https://papercloudelite.co.uk/app/components/apiDocumentation/img/1.png "img1")
+
 
 # Quick Guides
 Coming soon
 ## Setting up an app in Papercloud
+
+
+
 ## Exporting and importing Swagger (Postman)
 ## Make REST API calls
 <!--- NKB --->
