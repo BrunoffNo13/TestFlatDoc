@@ -901,6 +901,83 @@ Body:
 }
 ```
 
+The results are returned with multiple items, tags can either be on boxes or paper items. The elementType relating to these results are as below:
+
+- Box item elementType = 6
+- Paper items elementType = 7
+
+Example result set:
+```json
+[
+    {
+        "elementId": 19,
+        "elementType": 6,
+        "elementDate": "26/08/2008",
+        "clientId": 4,
+        "clientFileName": " Jones, Welshy",
+        "tabId": 18,
+        "tabTitle": "Portal Uploaded",
+        "rowId": 26,
+        "rowTitle": "Documents",
+        "boxId": 19,
+        "boxTitle": "sdfsdf",
+        "paperId": null,
+        "paperTitle": null,
+        "pageCount": 17,
+        "tagCount": 4,
+        "tags": [
+            "MORE",
+            "TAG2",
+            "TAG3",
+            "TEST"
+        ]
+    },
+    {
+        "elementId": 1115,
+        "elementType": 6,
+        "elementDate": "26/08/2008",
+        "clientId": null,
+        "clientFileName": null,
+        "tabId": null,
+        "tabTitle": null,
+        "rowId": null,
+        "rowTitle": null,
+        "boxId": 1115,
+        "boxTitle": "Test",
+        "paperId": null,
+        "paperTitle": null,
+        "pageCount": 17,
+        "tagCount": 4,
+        "tags": [
+            "MORE",
+            "TAG2",
+            "TAG3",
+            "TEST"
+        ]
+    },
+    {
+        "elementId": 6451,
+        "elementType": 7,
+        "elementDate": "16/06/2022",
+        "clientId": 1080,
+        "clientFileName": "Mr Smith, John",
+        "tabId": 1097,
+        "tabTitle": "Insurance",
+        "rowId": 1108,
+        "rowTitle": "T1-R1",
+        "boxId": 2411,
+        "boxTitle": "Box Tile String",
+        "paperId": 6451,
+        "paperTitle": "FrontDriver2",
+        "pageCount": 1,
+        "tagCount": 1,
+        "tags": [
+            "PAPER"
+        ]
+    }
+]
+```
+
 Curl Example:
 ```bash
 
