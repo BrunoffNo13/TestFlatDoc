@@ -47,6 +47,15 @@ Swagger shows all of the exposed endpoints as well as param lengths, and return 
 ## Sandbox Access
 Sandbox access can be requested through our support team. This will allow new 3rd parties to gain access to a demo system to trial the API and test the relevant end points.
 
+## Setting up an app in Papercloud
+
+Authentication must first be configured within Papercloud, this is on a per site basis, before any connection can be made
+
+To do this login to Papercloud as an Administrator and access the Client Auth Settings screen
+
+> ![img1](https://papercloudelite.co.uk/app/components/apiDocumentation/img/1.png "img1")
+
+
 ## Versioning
 
 The current version of the API is V02
@@ -1142,17 +1151,4 @@ Required Parameters:
 Success returns status - 204 - as the item is deleted there is no return data associated with this call.
 
 
-# Quick Guides
-Coming soon
-## Setting up an app in Papercloud
 
-Authentication must first be configured within Papercloud, this is on a per site basis, before any connection can be made
-
-To do this login to Papercloud as an Administrator and access the Client Auth Settings screen
-
-> ![img1](https://papercloudelite.co.uk/app/components/apiDocumentation/img/1.png "img1")
-
-
-## Exporting and importing Swagger (Postman)
-## Make REST API calls
-<!--- NKB --->
