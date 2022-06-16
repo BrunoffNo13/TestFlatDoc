@@ -893,25 +893,25 @@ This endpoint is demoed via &quot;Flow4B&quot; of the ApiV2FlowGuide.
 Body:
 ```json
 {
-  "clientId": 0, 
+  "clientId": 0, -- OPTIONAL client ID filter
   "tag": "string", --REQUIRED, Comma separated list of tags
-  "from": "2022-06-09T07:40:56.450Z", --OPTIONAL – start date of when the tag was applied
-  "to": "2022-06-09T07:40:56.450Z", --OPTIONAL – end date of when the tag was applied
+  "from": "", --OPTIONAL – start date of when the tag was applied
+  "to": "", --OPTIONAL – end date of when the tag was applied
   "boxTitle": "string" --OPTIONAL –limit the search by box titles
 }
 ```
 
-The results are returned with multiple items, tags can either be on boxes or paper items. The elementType relating to these results are as below:
+The results are returned with relevant tags displayed against the relevant items, tags can either be on boxes or paper items. The elementType relating to these results are as below:
 
-- Box item elementType = 6
+- Box items elementType = 6
 - Paper items elementType = 7
 
 Example result set:
 ```json
 [
-    {
-        "elementId": 19,
-        "elementType": 6,
+    { -- Box matching the tags
+        "elementId": 19, -- Can be ignored this is a system identifier for the tag
+        "elementType": 6, -- 6 = Box 7 = paper 
         "elementDate": "26/08/2008",
         "clientId": 4,
         "clientFileName": " Jones, Welshy",
@@ -932,32 +932,9 @@ Example result set:
             "TEST"
         ]
     },
-    {
-        "elementId": 1115,
-        "elementType": 6,
-        "elementDate": "26/08/2008",
-        "clientId": null,
-        "clientFileName": null,
-        "tabId": null,
-        "tabTitle": null,
-        "rowId": null,
-        "rowTitle": null,
-        "boxId": 1115,
-        "boxTitle": "Test",
-        "paperId": null,
-        "paperTitle": null,
-        "pageCount": 17,
-        "tagCount": 4,
-        "tags": [
-            "MORE",
-            "TAG2",
-            "TAG3",
-            "TEST"
-        ]
-    },
-    {
+    { -- a Paper item within a box matching the tags
         "elementId": 6451,
-        "elementType": 7,
+        "elementType": 7, 
         "elementDate": "16/06/2022",
         "clientId": 1080,
         "clientFileName": "Mr Smith, John",
