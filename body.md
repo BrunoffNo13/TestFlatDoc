@@ -49,10 +49,6 @@ To do this login to Papercloud as an Administrator and access the Client Auth Se
 
 > ![img1](https://papercloudelite.co.uk/app/components/apiDocumentation/img/1.png "img1")
 
-
-From this screen your site tenant id will also be available:
-> ![img2](https://papercloudelite.co.uk/app/components/apiDocumentation/img/2.png "img2")  
-
 To add a new client configuration simply select “Add”
 > ![img3](https://papercloudelite.co.uk/app/components/apiDocumentation/img/3.png "img3") 
 
