@@ -1048,7 +1048,7 @@ Parameters:
  - **Id** - ClientFileID for where the paper needs to go. Not supplying this ID makes an item on the users in-tray
  - **Files** – Required – the File to be sent
  - **UploadItinerary**:
-  -- { &quot;BoxId&quot;:, &quot;FileInformation&quot;: [{ &quot;FileName&quot;: &quot;&quot;, &quot;CreatedDate&quot;: &quot;&quot;}] }
+  -- { &quot;boxId&quot;:, &quot;FileInformation&quot;: [{ &quot;FileName&quot;: &quot;&quot;, &quot;CreatedDate&quot;: &quot;&quot;}] }
 
 The UploadItinerary can be altered to either post the item into an existing box (as above) or to create a new box within the specified row by simply removing the BoxID entry and defining tab and row id's as well as a title for the box as below example shows:
 
