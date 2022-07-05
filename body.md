@@ -184,6 +184,12 @@ These are listed on the Swagger documentation within the schema section for any 
 
 Dates should be provided in &quot;DD/MM/YYYY&quot; format e.g., &quot;23/02/2001&quot;. There is no time requirement on the API.
 
+## One-to-one relationships
+
+Linking between any 3rd Party client and a Papercloud client is done via the "ExternalReference" field. This unique field allows a 3rd party integration to specify the relevant identifying ID's, thus creating a link between the two systems. 
+
+Note Papercloud does not auto populate this field for any client files, but users can alter\add the references manually within the front end.
+
 ## Paper Types
 
 PaperType lookup by extension:
