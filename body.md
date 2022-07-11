@@ -74,7 +74,7 @@ The Papercloud API requires the following items defined as scope:
 
 > openid profile papercloudapi roles
 
-Under IDP an additional scope is required to allow access to refresh tokens, this is "offline_access". The scope would therefore become:
+Under IDP an additional scope is required to allow access to long-lived refresh tokens, this is "offline_access". The scope would therefore become:
 
 > openid profile offline_access papercloudapi roles
 
