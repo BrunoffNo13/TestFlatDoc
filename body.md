@@ -59,7 +59,7 @@ To complete this screen, you need to input the following:
 Client Name = Add a name
 Flow Type = Should be left as Authorization Code
 Return URLs = https://getpostman.com/oauth2/callback (for user with Postman)
-> ![img5](https://papercloudelite.co.uk/app/components/apiDocumentation/img/5.png "img5") 
+> ![img5](https://content.watermarktech.co.uk/download/flatdoc/5.PNG "img5") 
 
 
 Clicking save will complete the changes and store them within the system.
