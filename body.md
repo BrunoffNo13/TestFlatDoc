@@ -58,7 +58,7 @@ This will open the relevant modal for configuring an app
 To complete this screen, you need to input the following:
 Client Name = Add a name
 Flow Type = Should be left as Authorization Code
-Return URLs = https://www.getpostman.com/oauth2/callback (for user with Postman)
+Return URLs = https://getpostman.com/oauth2/callback (for user with Postman)
 > ![img5](https://papercloudelite.co.uk/app/components/apiDocumentation/img/5.png "img5") 
 
 
@@ -67,6 +67,12 @@ Clicking save will complete the changes and store them within the system.
 At this stage you need to take note\copy the Client Secret, as it will not be accessible once the configuration has been saved.
 
 The Clientid, ClientSecret and return URL are all required when making calls to the API.
+
+## Scope
+
+The Papercloud API requires the following items defined as scope: 
+
+> openid profile papercloudapi roles
 
 ## Swagger 
 Swagger shows all of the exposed endpoints as well as param lengths, and return codes where relevant. Swagger is however not definative and some self learning\exploration is encouraged as it is not possible to detail the entire result sets for all of the calls. 
