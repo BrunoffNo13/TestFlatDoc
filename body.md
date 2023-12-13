@@ -25,7 +25,7 @@ Auth URL: [https://sandboxidp.papercloudelite.co.uk/connect/authorize](https://s
 
 Token URL: [https://sandboxidp.papercloudelite.co.uk/connect/token](https://sandboxidp.papercloudelite.co.uk/connect/token)
 
-## Acceptend Authentication code flows
+## Accepted Authentication code flows
 
 Papercloud allows the following flows:
 Authorisation Code Flow
