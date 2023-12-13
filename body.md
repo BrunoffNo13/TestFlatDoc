@@ -17,13 +17,13 @@ Token URL: [https://idp.papercloudelite.co.uk/connect/token](https://idp.papercl
 
 ### Sandbox
 
-Swagger: [https://sandboxapi01.papercloudelite.co.uk/swagger](https://sandboxapi01.papercloudelite.co.uk/swagger)
+Swagger: [https://sandboxapi.papercloudelite.co.uk/swagger](https://sandboxapi.papercloudelite.co.uk/swagger)
 
-Base URL: [https://sandboxapi01.papercloudelite.co.uk](https://sandboxapi01.papercloudelite.co.uk/)
+Base URL: [https://sandboxapi.papercloudelite.co.uk](https://sandboxapi.papercloudelite.co.uk/)
 
-Auth URL: [https://idpsandbox01.papercloudelite.co.uk/connect/authorize](https://idpsandbox01.papercloudelite.co.uk/connect/authorize)
+Auth URL: [https://sandboxidp.papercloudelite.co.uk/connect/authorize](https://sandboxidp.papercloudelite.co.uk/connect/authorize)
 
-Token URL: [https://idpsandbox01.papercloudelite.co.uk/connect/token](https://idpsandbox01.papercloudelite.co.uk/connect/token)
+Token URL: [https://sandboxidp.papercloudelite.co.uk/connect/token](https://sandboxidp.papercloudelite.co.uk/connect/token)
 
 ## Acceptend Authentication code flows
 
