@@ -5,7 +5,7 @@ Welcome to the Papercloud API, this document should provide guidance for some of
 
 IDP and Base API URLS
 
-### Live
+### Live UK (.co.uk)
 
 Swagger: [https://api.papercloudelite.co.uk/swagger](https://api.papercloudelite.co.uk/swagger)
 
@@ -14,6 +14,16 @@ Base URL: [https://api.papercloudelite.co.uk/](https://api.papercloudelite.co.uk
 Auth URL: [https://idp.papercloudelite.co.uk/connect/authorize](https://idp.papercloudelite.co.uk/connect/authorize)
 
 Token URL: [https://idp.papercloudelite.co.uk/connect/token](https://idp.papercloudelite.co.uk/connect/token)
+
+### Live South Africa (.co.za)
+
+Swagger: [https://api.papercloudelite.co.za/swagger](https://api.papercloudelite.co.uk/swagger)
+
+Base URL: [https://api.papercloudelite.co.za/](https://api.papercloudelite.co.uk/)
+
+Auth URL: [https://idp.papercloudelite.co.za/connect/authorize](https://idp.papercloudelite.co.uk/connect/authorize)
+
+Token URL: [https://idp.papercloudelite.co.za/connect/token](https://idp.papercloudelite.co.uk/connect/token)
 
 ### Sandbox
 
